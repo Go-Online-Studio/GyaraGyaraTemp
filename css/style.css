@@ -1,0 +1,359 @@
+/* ============================================
+   GyaraGyara — Supplementary Styles
+   (Does NOT replace Tailwind — adds functionality styles)
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --gg-primary: #1a2a40;
+  --gg-surface: #FFF7EA;
+  --gg-surface-dim: #dbd9db;
+  --gg-on-surface: #1a1c1e;
+  --gg-outline: #73777f;
+  --gg-outline-variant: #c3c6cf;
+  --gg-error: #ba1a1a;
+  --gg-success: #2e7d32;
+  --gg-toast-bg: #323232;
+  --gg-transition: 0.3s ease;
+  --gg-z-toast: 9999;
+  --gg-z-popup: 9000;
+  --gg-z-overlay: 8000;
+  --gg-z-navbar: 1000;
+}
+
+.bg-surface{
+  background-color: var(--gg-surface) !important;
+}
+
+/* --- Smooth Scroll --- */
+html {
+  scroll-behavior: smooth;
+}
+
+.max-w-7xl{
+  max-width: 100rem !important;
+}
+
+.gg-nav-desktop a{
+ font-family: 'Sentient', serif;
+ font-weight: 300; 
+}
+.gg-nav-desktop a.font-semibold{
+ font-weight: 400;
+}
+
+h1,
+h2,
+h3{
+  font-family: 'Sentient', serif;
+}
+
+.font-serif {
+  font-family: 'Sentient', serif !important;
+}
+
+.font-bodyPoppins{
+  font-family:  'Poppins', sans-serif !important;
+}
+
+/* --- Skip to Content (Accessibility) --- */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100000;
+  padding: 12px 24px;
+  background: var(--gg-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+.skip-to-content:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* --- Focus Visible (Accessibility) --- */
+*:focus-visible {
+  outline: 2px solid var(--gg-primary);
+  outline-offset: 2px;
+}
+
+/* --- Toast Notifications --- */
+.gg-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--gg-z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.gg-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--gg-toast-bg);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  max-width: 360px;
+}
+.gg-toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.gg-toast.hide {
+  transform: translateX(120%);
+  opacity: 0;
+}
+.gg-toast-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+.gg-toast-success { border-left: 4px solid var(--gg-success); }
+.gg-toast-error { border-left: 4px solid var(--gg-error); }
+
+/* --- Newsletter Popup Overlay --- */
+.gg-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--gg-z-popup);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 16px;
+}
+
+/* Custom utility class to style the scrollbar */
+.custom-scroll {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 transparent;
+}
+
+/* For Chrome, Safari, and Edge */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Adjust this value to change the roundness */
+  border: 2px solid transparent; /* Creates padding around the thumb if track has color */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3; /* Darkens on hover */
+}
+
+.gg-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.gg-popup-overlay .gg-popup-content {
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gg-popup-overlay.active .gg-popup-content {
+  transform: translateY(0) scale(1);
+}
+
+
+
+/* --- Navbar Transitions (Homepage transparent → solid) --- */
+.gg-navbar-transparent {
+  background: linear-gradient(#00000021,#00000021) !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.gg-navbar-solid {
+  background: var(--gg-primary) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Animations --- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gg-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.gg-fade-up.animated {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* --- Card Hover Lift --- */
+.gg-hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gg-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Image Hover Zoom --- */
+.gg-img-zoom {
+  overflow: hidden;
+}
+.gg-img-zoom img {
+  transition: transform 0.5s ease;
+}
+.gg-img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* --- Form Validation --- */
+.gg-field-error {
+  border-color: var(--gg-error) !important;
+}
+.gg-error-message {
+  color: var(--gg-error);
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+.gg-error-message.visible {
+  display: block;
+}
+
+/* --- Wishlist Heart Active --- */
+.gg-heart-active svg,
+.gg-heart-active .ph {
+  fill: #ef4444;
+  color: #ef4444;
+}
+
+/* --- Search Input for Shop --- */
+.gg-search-container {
+  position: relative;
+}
+.gg-search-container input {
+  width: 100%;
+  padding: 10px 16px 10px 44px;
+  border: 1px solid var(--gg-outline-variant);
+  border-radius: 8px;
+  font-size: 14px;
+  background: transparent;
+  transition: border-color 0.2s ease;
+}
+.gg-search-container input:focus {
+  outline: none;
+  border-color: var(--gg-primary);
+}
+.gg-search-container svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--gg-outline);
+  pointer-events: none;
+}
+
+/* --- No Results Message --- */
+.gg-no-results {
+  text-align: center;
+  padding: 48px 16px;
+  color: var(--gg-outline);
+  font-size: 16px;
+}
+
+/* --- Print Styles --- */
+@media print {
+  .gg-popup-overlay,
+  .gg-toast-container,
+  .skip-to-content {
+    display: none !important;
+  }
+}
+
+/* --- Mobile hamburger button --- */
+.gg-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNav a{
+  color: #555555;
+  font-family: 'Sentient', serif;;
+}
+@media (max-width: 767px) {
+  .gg-hamburger {
+    display: flex;
+  }
+  .gg-nav-desktop {
+    display: none !important;
+  }
+
+  .gg-navbar-transparent {
+    background: linear-gradient(#fff7ea, #fff7ea) !important;
+  }
+  header .bg-primary{
+    background-color: #fff7ea !important;
+  }
+}
+
+/* --- Cart badge --- */
+.gg-cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+.gg-cart-badge:empty,
+.gg-cart-badge[data-count="0"] {
+  display: none;
+}
+
+

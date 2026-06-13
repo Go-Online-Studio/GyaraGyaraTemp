@@ -1,0 +1,690 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About Us - Gyara Gyara | Stories Shaped in Wood</title>
+  <meta name="description"
+    content="Learn about Gyara Gyara's journey from a small workshop to handcrafted wooden decor. More than pots â€” a way of living. 250+ happy customers, 4000+ products sold." />
+  <link rel="canonical" href="https://gyaragyara.com/about.html" />
+  <meta property="og:title" content="About Us - Gyara Gyara" />
+  <meta property="og:description"
+    content="Stories Shaped in Wood. Learn about our journey from hobby to handcrafted wooden decor." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          colors: {
+            primary: '#1a2a40',
+            surface: '#FFF7EA',
+            'surface-container': '#f0eef0',
+            outline: '#7b767b',
+            onSurface: '#1c1b1d',
+          },
+          borderRadius: { DEFAULT: '0.25rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style data-purpose="about-page-styles">
+    @font-face {
+      font-family: 'Sentient';
+      src: url('fonts/Sentient-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Sentient';
+      src: url('fonts/Sentient-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body[data-page="about"] {
+      background-color: #fbf2e6;
+      color: #25211c;
+    }
+
+    .about-page {
+      --about-cream: #fbf2e6;
+      --about-beige: #efe2ca;
+      --about-card: #fff8ec;
+      --about-border: #3b3328;
+      --about-muted: #746759;
+      background: var(--about-cream);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .about-hero {
+      position: relative;
+      min-height: max(calc(100vh - 87px),468px);
+      background: #e9dec6;
+      overflow: hidden;
+    }
+
+    .about-hero__grain,
+    .about-hero__pods {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .about-hero__grain {
+      inset: -48px -80px -56px -40px;
+      width: calc(100% + 120px);
+      height: calc(100% + 112px);
+      object-fit: cover;
+      object-position: top;
+      opacity: 0.42;
+      color: #b8a982;
+    }
+
+    .about_rightMain::after,.about_leftMain::after{
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      height: 5px;
+      width: 13px; 
+      background-color: #fff7ea;  
+    }
+    .about_rightMain::after{
+      right: 0; 
+    }
+    .about_rightMain,.about_leftMain{
+      position: relative;
+      isolation: isolate;
+    }
+    .about_leftMain::after{
+      left: 0;
+    }
+
+    .about-hero__pods {
+      right: clamp(24px, 8vw, 112px);
+      bottom: 0;
+      width: min(350px, 24vw);
+      color: #40372d;
+    }
+
+    .about-hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto 0 0;
+      min-height: 468px;
+      padding: 130px 80px 72px;
+    }
+
+    .about-subtitle {
+      margin: 0;
+    }
+
+    .about-content {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .about-story {
+      position: relative;
+    }
+    .about-row {
+      display: flex;
+      align-items: center;
+      min-height: 208px;
+      padding: 14px 14px 14px 0;
+    }
+
+    .about-row--market {
+      width: 735px;
+      max-width: 100%;
+      padding: 16px 38px 16px 16px;
+      gap: 78px;
+    }
+
+    .about-row--craft {
+      width: 650px;
+      max-width: 100%;
+      margin-left: auto;
+      padding: 18px 18px 18px 46px;
+      gap: 34px;
+    }
+
+    .about-copy {
+      font-family: 'Sentient', Georgia, serif;
+      margin: 0;
+    }
+
+
+    .about-image {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+
+    .about-after {
+      display: flex;
+      align-items: start;
+    }
+
+    .about-stat {
+      width: 150px;
+      padding: 24px 10px 12px;
+      box-shadow: -3px 3px 5px rgba(59, 51, 40, 0.24);
+      text-align: center;
+    }
+
+  .about-stat.stat_Revrse{
+    box-shadow: 3px 3px 5px rgba(59, 51, 40, 0.24);
+  }
+
+    .about-stat__number {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .about-stat__label {
+      display: block;
+    }
+
+    .about-feature {
+      position: relative;
+    }
+
+    .about-spark {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      color: var(--about-border);
+    }
+
+    .about-feature .about-spark {
+      left: 22px;
+      top: 22px;
+    }
+
+    .about-feature__image {
+      display: block;
+      width: min(calc(100% - 55px), 90%);
+      aspect-ratio: 1.6/1;
+      margin: 0 0px 18px auto;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .about-inset {
+      width: 100%;
+      padding: 14px 20px 15px;
+      border: 1px solid #d1bea3;
+      border-radius: 8px;
+      background: #f3e6d0;
+      text-align: center;
+    }
+
+    .about-inset p {
+      margin: 0 0 8px;
+    }
+
+    .about-inset p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-action {
+      text-align: center;
+      margin-bottom: 88px;
+    }
+
+    .about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 385px;
+  height: 42px;
+  background: #b8b8b8;
+  color: #1f1f1f;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.4) inset,
+    0 3px 6px rgba(0,0,0,0.18);
+  transition: all 0.2s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.4) inset,
+    0 5px 10px rgba(0,0,0,0.22);
+}
+    .about-placeholders {
+      display: flex;
+      justify-content: center;
+      gap: 142px;
+    }
+
+    .about-placeholder {
+      width: 282px;
+      height: 282px;
+      background: #d2d2d0;
+    }
+
+
+    @media (max-width: 767px) {
+      .about-hero,
+      .about-hero__inner {
+        min-height: 450px;
+      }
+
+      .about-hero__inner {
+        padding: 88px 24px 52px;
+      }
+
+      .about-hero__grain {
+        opacity: 0.28;
+      }
+
+      .about-hero__pods {
+        width: 180px;
+        right: -8px;
+        opacity: 0.72;
+      }
+
+      .about-row,
+      .about-row--market,
+      .about-row--craft {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px;
+      }
+
+      .about-stat {
+        justify-self: center;
+      }
+
+      .about-feature,
+      .about-statement {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .about-feature {
+        margin-bottom: 66px;
+      }
+
+
+      .about-placeholders {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        margin-bottom: 62px;
+      }
+
+      .about-placeholder {
+        width: min(282px, 78vw);
+        height: min(282px, 78vw);
+      }
+    }
+  </style>
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Gyara Gyara",
+  "url": "https://gyaragyara.com",
+  "description": "Handcrafted wooden decor and artisan pottery. Born in a small workshop, designing with artistry, innovation, and care.",
+  "foundingDate": "2021",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8156087656",
+    "contactType": "customer service"
+  }
+}
+</script>
+</head>
+
+<body class="font-sans antialiased text-onSurface min-h-screen flex flex-col" data-page="about">
+
+  <header id="mainNavbar">
+    <!-- Reusable Navbar Component â€” Injected by critical.js -->
+    <a href="#page-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="fixed inset-0 bg-black/15 z-40 opacity-0 invisible transition-all duration-300" id="offcanvasOverlay" aria-hidden="true"></div>
+    <nav class="fixed top-[87px] left-0 w-[180px] md:w-[280px] bg-surface rounded-br-[48px] shadow-[0_8px_32px_rgba(0,0,0,0.08)] z-50 -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col" id="offcanvasMenu" role="navigation" aria-label="Mobile Navigation">
+      <div class="flex flex-col w-full mt-4 mobileNav">
+        <a href="index.html" data-nav="home"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          HOME 
+        </a>
+
+        <a href="shop_now.html" data-nav="shop"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          SHOP NOW
+        </a>
+
+        <a href="about.html" data-nav="about"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          ABOUT US
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Navbar -->
+    <div class="bg-primary text-gray-950 md:text-white py-4 px-3 lg:px-8 sticky top-0 z-50 transition-all duration-300" id="navbarInner" role="banner">
+      <div class="max-w-7xl mx-auto flex justify-between gap-1  lg:grid lg:grid-cols-3 items-center">
+
+        <!-- Left Navigation & Hamburger -->
+        <div class="flex items-center ">
+          <!-- Desktop Navigation -->
+          <nav class="gg-nav-desktop hidden md:flex gap-6 text-sm uppercase tracking-wider"
+            aria-label="Main Navigation">
+            <a class="hover:text-gray-300 transition-colors" href="index.html" data-nav="home">Home</a>
+            <a class="hover:text-gray-300 transition-colors" href="shop_now.html" data-nav="shop">Shop Now</a>
+            <a class="hover:text-gray-300 transition-colors" href="about.html" data-nav="about">About Us</a>
+          </nav>
+
+          <!-- Mobile Hamburger -->
+          <button class="gg-hamburger md:hidden " id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"
+            aria-controls="offcanvasMenu"> 
+            <svg width="55" height="55" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" style="transform-origin: 50% 50%; transform: scaleX(1) scaleY(1) rotate(0deg);">
+            <path d="M13.5 16C13.9142 16 14.25 16.3358 14.25 16.75C14.25 17.1642 13.9142 17.5 13.5 17.5H10.5C10.0858 17.5 9.75 17.1642 9.75 16.75C9.75 16.3358 10.0858 16 10.5 16H13.5ZM16.5 11C16.9142 11 17.25 11.3358 17.25 11.75C17.25 12.1642 16.9142 12.5 16.5 12.5H7.5C7.08579 12.5 6.75 12.1642 6.75 11.75C6.75 11.3358 7.08579 11 7.5 11H16.5ZM19.5 6C19.9142 6 20.25 6.33579 20.25 6.75C20.25 7.16421 19.9142 7.5 19.5 7.5H4.5C4.08579 7.5 3.75 7.16421 3.75 6.75C3.75 6.33579 4.08579 6 4.5 6H19.5Z" fill="#212121" style="fill:CurrentColor;stroke:none" stroke="none" class=""></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center Logo -->
+        <div class="flex justify-center -mr-[24px]">
+          <a href="index.html" class="flex flex-col items-center justify-center text-center text-gray-950 md:text-white"
+            aria-label="Gyara Gyara Home">
+            <!-- Stylized GG Logo -->
+            <svg width="124" height="55" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+              id="a" viewBox="0 0 473.17 206.81">
+              <g id="b">
+                <g id="c">
+                  <path
+                    d="M215.45,44.74h-16.49c-1.54,0-2.16-.42-2.1-2,.11-2.58.09-5.17,0-7.76,0-1.42.58-1.86,1.9-1.85h26.47c1.1,0,1.31.56,1.46,1.42,2.95,14.52-6.44,28.68-20.96,31.63-2.46.5-4.97.65-7.47.45-14.78-1.08-27.13-13.38-28.51-28.36-1.52-18.73,11.92-35.35,30.55-37.79,15.06-2.16,27.33,2.91,36.21,15.3,6.15,8.59,8.17,18.38,6.74,28.82s-6.39,19.08-13.79,26.4c-4.76,4.7-7.78,10.22-7.9,17-.16,9.76,6.65,18,16.54,20.34,9.58,2.25,18.25-.9,23.84-8.7,2.01-2.81,3.11-6.18,3.13-9.64,0-1.67-.58-1.92-2-1.91-7,.06-13.94,0-20.9.06-1.45,0-2.13-.21-2-1.89.15-2.71.08-5.44,0-8.16,0-1.08.24-1.49,1.42-1.49h33.43c.77,0,1.46-.06,1.45,1.06,0,6.28.74,12.57-.73,18.82-3.22,14.11-15.53,24.3-30,24.81-14.43.47-25.7-5.33-32.21-18.31-6.38-12.73-4.18-25,4.09-36.42,2.93-4,6.87-7.17,9.67-11.33,7.8-11.63,6.08-28-4-37-13.79-12.24-36.9-5.54-41.29,11.92-3.07,12.24,6.78,24.9,19.11,24.55,5.4-.15,12.17-4.78,14.34-9.97Z" />
+                  <path
+                    d="M22.42,206.81c-7.13,0-12.65-2.06-16.56-6.17C1.95,196.53,0,190.72,0,183.21c0-7.1,2.06-12.87,6.18-17.3,4.12-4.43,9.49-6.65,16.11-6.64,5.11,0,10.15,1.21,14.71,3.51l.71,10.38h-1.83l-2.5-4c-2.74-4.19-6.44-6.28-11.09-6.28-4.39-.09-8.53,2.04-11,5.67-2.8,3.77-4.2,8.7-4.2,14.77,0,6.07,1.46,10.86,4.39,14.36,2.86,3.54,7.23,5.51,11.77,5.32,3.85,0,6.65-.75,8.4-2.23v-9.47c.04-.77-.19-1.53-.64-2.16-.65-.68-1.47-1.19-2.37-1.48l-2.64-1.15v-1.82h15.58v1.82l-1.48.88c-1.19.69-1.86,2.01-1.73,3.37v11.24c-4.01,3.21-9.32,4.81-15.95,4.81Z" />
+                  <path
+                    d="M74.76,206.14h-18.19v-1.82l2.88-1.22c.87-.31,1.66-.81,2.31-1.48.41-.61.62-1.35.57-2.09v-10.66l-12.33-22.52c-.44-.87-.95-1.71-1.53-2.49-.45-.48-1-.85-1.61-1.08l-2.24-1v-1.82h16.94v1.82l-2.11.88c-1.54.68-2.31,1.33-2.31,2,.05.71.27,1.4.65,2l9.6,17.53,8.91-17.39c.34-.62.56-1.3.64-2,.01-.42-.16-.83-.48-1.11-.59-.44-1.25-.78-1.95-1l-2.25-.88v-1.82h14v1.82l-2.56,1.08c-.6.26-1.14.63-1.61,1.08-.51.61-.94,1.28-1.28,2l-11.75,22.3v11.26c-.05.74.16,1.48.58,2.09.62.66,1.39,1.17,2.24,1.48l2.88,1.22v1.82Z" />
+                  <path
+                    d="M98.85,206.14h-14v-1.82l2.5-1.08c.76-.25,1.45-.69,2-1.28.54-.76.97-1.61,1.25-2.5l14.29-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.18,2.33.59.53,1.27.95,2,1.24l2.3,1v1.82h-17v-1.82l2.11-.88c1.67-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.45-1.82l-2.56-7h-17.98l-2.43,6.81c-.26.64-.43,1.31-.51,2,0,.42.2.82.54,1.08.65.47,1.38.84,2.15,1.08l2.24.88v1.85ZM105.64,167.83l-7.49,21.11h15.24l-7.75-21.11Z" />
+                  <path
+                    d="M153.05,206.14h-17.17v-1.82l2.5-1.08c.79-.33,1.5-.84,2.05-1.49.39-.67.56-1.45.51-2.22v-33c.06-.8-.12-1.59-.51-2.29-.55-.64-1.26-1.13-2.05-1.42l-2.5-1.08v-1.82h18.58c5.16,0,9.18,1.14,12.07,3.41,2.88,2.25,4.49,5.76,4.33,9.41.08,2.93-.94,5.78-2.85,8-2.1,2.33-4.87,3.95-7.92,4.66,1.5.79,2.72,2.04,3.46,3.57l6,10.86c.41.85.98,1.62,1.67,2.26.73.59,1.55,1.06,2.43,1.38l2.31.94v1.76h-10.68l-8.77-15.92c-1.41-2.47-2.57-3.8-3.46-4h-5.38v13.29c-.05.78.16,1.55.6,2.19.64.67,1.41,1.19,2.28,1.52l2.5,1.08v1.81ZM147.67,163.38v19.42h5.83c2.73.1,5.38-.93,7.33-2.83,1.91-1.9,2.94-4.52,2.85-7.21.07-2.54-.97-4.99-2.85-6.71-1.98-1.81-4.59-2.77-7.27-2.67h-5.89Z" />
+                  <path
+                    d="M193.73,206.14h-14v-1.82l2.49-1.08c.76-.25,1.45-.69,2-1.28.54-.77.96-1.61,1.25-2.5l14.28-38.84,4.87-1.35,15,40.46c.26.84.66,1.63,1.19,2.33.59.53,1.27.95,2,1.24l2.31,1v1.82h-17.12v-1.82l2.12-.88c1.66-.68,2.5-1.39,2.5-2.16-.05-.63-.2-1.24-.45-1.82l-2.57-7h-17.86l-2.43,6.81c-.26.64-.44,1.31-.52,2,0,.43.21.83.55,1.08.65.47,1.37.84,2.14,1.08l2.25.88v1.85ZM200.52,167.83l-7.52,21.11h15.25l-7.73-21.11Z" />
+                  <path
+                    d="M270.6,206.81c-7.13,0-12.65-2.06-16.56-6.17-3.91-4.11-5.87-9.92-5.86-17.43,0-7.1,2.06-12.87,6.18-17.3,4.12-4.43,9.49-6.65,16.11-6.64,5.1.01,10.12,1.22,14.67,3.51l.71,10.38h-1.8l-2.49-4c-2.74-4.19-6.44-6.28-11.09-6.28-4.39-.09-8.53,2.04-11,5.67-2.8,3.77-4.2,8.7-4.2,14.77s1.46,10.86,4.39,14.36c2.84,3.56,7.2,5.57,11.75,5.4,3.85,0,6.64-.75,8.4-2.23v-9.55c.04-.77-.19-1.53-.64-2.16-.65-.68-1.47-1.19-2.37-1.48l-2.63-1.15v-1.82h15.57v1.82l-1.48.88c-1.19.69-1.86,2.01-1.73,3.37v11.24c-3.99,3.21-9.3,4.81-15.93,4.81Z" />
+                  <path
+                    d="M322.94,206.14h-18.19v-1.82l2.88-1.22c.87-.31,1.66-.81,2.31-1.48.41-.61.62-1.35.57-2.09v-10.66l-12.3-22.52c-.44-.88-.95-1.71-1.54-2.49-.44-.48-.99-.85-1.6-1.08l-2.24-1v-1.82h16.91v1.82l-2.11.88c-1.54.68-2.31,1.33-2.31,2,.05.71.27,1.4.64,2l9.61,17.53,8.91-17.39c.34-.62.56-1.3.64-2,.01-.42-.16-.83-.48-1.11-.6-.45-1.28-.78-2-1l-2.24-.88v-1.82h14v1.82l-2.56,1.08c-.6.26-1.14.63-1.61,1.08-.51.61-.94,1.28-1.28,2l-11.72,22.32v11.26c-.05.74.16,1.48.58,2.09.62.66,1.39,1.17,2.24,1.48l2.88,1.22v1.8Z" />
+                  <path
+                    d="M347,206.14h-14v-1.82l2.5-1.08c.74-.26,1.41-.7,1.95-1.28.54-.76.97-1.61,1.25-2.5l14.3-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.18,2.33.59.53,1.26.95,2,1.24l2.3,1v1.82h-17v-1.82l2.12-.88c1.66-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.45-1.82l-2.56-7h-17.96l-2.43,6.81c-.26.64-.43,1.31-.51,2,0,.42.2.82.54,1.08.65.47,1.38.84,2.15,1.08l2.24.88v1.85ZM353.79,167.83l-7.5,21.11h15.25l-7.75-21.11Z" />
+                  <path
+                    d="M401.23,206.14h-17.17v-1.82l2.49-1.08c.8-.32,1.5-.83,2.06-1.49.39-.67.56-1.45.51-2.22v-33c.06-.8-.12-1.59-.51-2.29-.55-.64-1.26-1.13-2.06-1.42l-2.49-1.08v-1.82h18.57c5.17,0,9.19,1.14,12.08,3.41,2.88,2.25,4.49,5.76,4.33,9.41.08,2.93-.94,5.78-2.86,8-2.1,2.33-4.86,3.96-7.91,4.66,1.5.8,2.71,2.05,3.46,3.57l6,10.86c.41.85.98,1.62,1.67,2.26.73.59,1.55,1.06,2.43,1.38l2.31.94v1.76h-10.68l-8.78-15.92c-1.4-2.47-2.56-3.8-3.45-4h-5.39v13.29c-.04.78.17,1.55.61,2.19.64.67,1.41,1.19,2.28,1.52l2.5,1.08v1.81ZM395.84,163.38v19.42h5.83c2.72.1,5.37-.91,7.33-2.8,1.91-1.9,2.94-4.52,2.85-7.21.07-2.54-.97-4.99-2.85-6.71-1.98-1.81-4.59-2.77-7.27-2.67l-5.89-.03Z" />
+                  <path
+                    d="M441.91,206.14h-14v-1.82l2.49-1.08c.76-.25,1.45-.69,2-1.28.54-.77.96-1.61,1.25-2.5l14.28-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.19,2.33.57.52,1.23.94,1.95,1.24l2.31,1v1.82h-17v-1.82l2.11-.88c1.67-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.44-1.82l-2.57-7h-17.93l-2.44,6.81c-.26.64-.43,1.31-.51,2,0,.43.21.83.55,1.08.65.47,1.37.84,2.14,1.08l2.25.88v1.85ZM448.7,167.83l-7.5,21.11h15.25l-7.75-21.11Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex gap-4 items-center justify-end">
+          <!-- Wishlist -->
+          <a href="wishlist.html" class="hover:opacity-75 relative" aria-label="Wishlist" id="navWishlistBtn">
+            <svg class="w-6 h-6" fill="currentColor" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M4.24 12.25a4.2 4.2 0 0 1-1.24-3A4.25 4.25 0 0 1 7.25 5c1.58 0 2.96.86 3.69 2.14h1.12A4.24 4.24 0 0 1 15.75 5A4.25 4.25 0 0 1 20 9.25c0 1.17-.5 2.25-1.24 3L11.5 19.5zm15.22.71C20.41 12 21 10.7 21 9.25A5.25 5.25 0 0 0 15.75 4c-1.75 0-3.3.85-4.25 2.17A5.22 5.22 0 0 0 7.25 4A5.25 5.25 0 0 0 2 9.25c0 1.45.59 2.75 1.54 3.71l7.96 7.96z" />
+            </svg>
+            <span class="gg-cart-badge" id="wishlistCount" data-count="0"></span>
+          </a>
+          <!-- Cart -->
+          <a href="checkout.html" class="hover:opacity-75 relative" aria-label="Shopping Cart" id="navCartBtn">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16.5 21a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-8 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M3.71 5.4h15.214c1.378 0 2.373 1.27 1.995 2.548l-1.654 5.6C19.01 14.408 18.196 15 17.27 15H8.112c-.927 0-1.742-.593-1.996-1.452zm0 0L3 3" />
+            </svg>
+            <span class="gg-cart-badge" id="cartCount" data-count="0"></span>
+          </a>
+          <!-- Account -->
+          <a href="user_profile_dashboard.html" class="hover:opacity-75" aria-label="Your Account">
+            <svg class="w-6 h-6" fill="currentColor" stroke="currentColor" stroke-width="0.4" viewBox="0 0 24 24">
+              <path
+                d="M12 4a4 4 0 1 0 0 8a4 4 0 0 0 0-8M6 8a6 6 0 1 1 12 0A6 6 0 0 1 6 8m2 10a3 3 0 0 0-3 3a1 1 0 1 1-2 0a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5a1 1 0 1 1-2 0a3 3 0 0 0-3-3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="page-content" class="flex-grow about-page">
+    <section class="about-hero" aria-labelledby="about-title">
+      
+      <img class="about-hero__grain" src="images/AboutBannerBack.webp" alt="background Aesthetic Illustrator" aria-hidden="true">
+      <?xml version="1.0" encoding="UTF-8"?><svg class="about-hero__pods" aria-hidden="true" id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.55 184.43"><defs><style>.d{fill:#eb855e;}.e{fill:none;stroke:#3d3a3a;stroke-miterlimit:10;}.f{fill:#f9e8c9;}.g{fill:#e79f4f;}</style></defs><g id="c"><path class="f" d="M31.6,156.94c-1.23.01-2.51.04-3.58.62-2.95,1.61-2.43,6.06-.82,9,3.65,6.69,10.57,11.13,17.85,13.39s15,2.61,22.63,2.88c34.03,1.23,68.1,1.45,102.15.67.72-.02,1.45-.03,2.14-.24,2.34-.71,3.52-3.4,3.59-5.84.16-5.75-4.21-10.84-9.4-13.31-5.19-2.47-11.09-2.85-16.83-3.19-39.45-2.33-78.35-4.32-117.72-3.99Z"/><path class="g" d="M5.57,53.84c-2.71,7.68-3.84,15.85-4.08,23.99-.4,14.02,1.91,28.25,7.95,40.91,8.4-8.79,16.8-17.58,25.2-26.37,5.21-5.46,10.45-10.94,14.71-17.17,11.56-16.89,15.13-39,9.47-58.66C49.55-15.72,9.88,41.64,5.57,53.84Z"/><path class="g" d="M121.8,39.51c-4.99,33.32,8.85,68.82,35.08,89.97,12-19.15,17.8-42.56,13.83-64.8-2.85-15.94-11.05-31.54-23.36-42.2-4.21-3.65-11.17-8.98-17.12-6.05-6.67,3.28-7.48,16.7-8.44,23.09Z"/><path class="e" d="M96.05,146.54c-3.46,1.27-7.45,1.03-10.74-.64,6.85-4.24,14.66-6.95,20.89-12.04,10.39-8.48,14.81-22.08,18.73-34.9-19.36-.23-36.63,18.84-34.49,38.08-1.13-12.63-8.42-24.56-19.15-31.33,6.18,4.37,3.06,16.21-4.48,16.95-2.85.28-5.65-.74-8.48-1.15-10.16-1.46-20.74,6.35-22.34,16.48.29-13.15,5.69-26.12,14.81-35.6,3.8-3.94,8.92-7.49,14.32-6.58,2.89.49,5.43,2.21,7.65,4.12,7.17,6.16,12.14,14.82,13.86,24.11-3-14.49,10.64-26.96,13.65-41.44,2.66-12.79-3.04-27.13,3.07-38.68,4.17-7.89,12.77-12.21,20.84-16.04,2.82-1.34,6.04-2.7,8.95-1.58,2.43.93,3.92,3.32,5.19,5.59,11.84,21.13,19.49,44.6,22.36,68.65-.46-26.59-7.47-53.05-20.23-76.38-1.25-2.29-3.11-4.87-5.72-4.69,1.16,9.4-4.12,18.22-6.98,27.25-5.46,17.29-1.54,37.23,10.05,51.17,3.91,4.7,8.63,8.77,11.75,14.02s4.33,12.29.85,17.31c15.88-12.38,21.54-34.59,18.78-54.53-2.75-19.95-12.61-38.15-23.07-55.36-1.35-2.22-2.86-4.56-5.26-5.55-2.16-.89-4.61-.51-6.87.09-11.42,3.03-20.87,10.98-29.16,19.4-8.34,8.47-16.07,17.85-20.65,28.82-4.59,10.97-5.75,23.78-1.06,34.71,1.19,2.76,2.96,5.58,5.81,6.55,6.7-21.25,12.99-45.96.65-64.52-4.3-6.46-10.48-11.41-15.62-17.23-5.14-5.82-9.42-13.21-8.56-20.92-16.38,4.33-29.12,17.8-36.61,32.99-7.49,15.2-10.66,36.69-13.59,53.38.52-24.66,7.35-49.16,19.67-70.52,2.79-4.85,6.36-9.91,11.78-11.29,5.42-1.39,12.27,3.63,10.39,8.9-3.29,2.92-7.94-4.53-12-2.84-1.56.65-2.28,2.43-2.65,4.07-2.42,10.73,3.31,21.41,5.25,32.23,2.73,15.25-2.66,31.72-13.89,42.4-9.19,8.75-22.29,14.29-27.28,25.97-15.39-39.07-.24-87.86,34.56-111.35,1.4-.94,2.95-1.88,4.63-1.78,1.6.1,2.97,1.12,4.22,2.11,9.24,7.28,17.94,15.24,26.03,23.78,4.08,4.31,8.06,8.86,10.59,14.23,8.85,18.77-2.01,40.22-7.47,60.24-4.19,15.37-5.13,31.62-2.71,47.37.26,1.67.6,3.45,1.79,4.66,1.82,1.87,4.82,1.68,7.41,1.34,13.65-1.8,27.23-4.02,40.74-6.68,5.8-1.14,13.53-1.41,15.78,4.06-23.32.28-46.65-.21-69.94-1.48-16.82-.92-32.46.93-49.32,2.99,1.35,3.12,5.53,3.4,8.73,4.53,3.21,1.12,5.71,6.08,2.6,7.45,7.45,2.22,11.62,10.31,18.58,13.77,4.26,2.12,9.18,2.32,13.93,2.44,18,.47,36.02.42,54.01-.15,4.65-.15,10.06-.74,12.54-4.68,1.69-2.69,1.43-6.16,2.5-9.15,3.66-10.31,19.06-9.46,27.03-16.95-7.43-2.71-16.34-.81-22.02,4.69-5.69,5.5-7.88,14.34-5.42,21.86,12.59.06,25.17.11,37.76.16"/><path class="d" d="M60.17,168.74c3.22,0,3.22-5,0-5s-3.22,5,0,5h0Z"/><path class="d" d="M58.57,160.35c3.22,0,3.22-5,0-5s-3.22,5,0,5h0Z"/><path class="d" d="M57.49,148.8c3.22,0,3.22-5,0-5s-3.22,5,0,5h0Z"/></g></svg>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="about-hero__inner">
+          <span class="about-kicker text-2xl lg:text-3xl ">Stories</span> 
+          <h1 class="about-title font-bodyPoppins font-bold text-3xl md:text-4xl mb-4 lg:mb-8" id="about-title">Shaped in Wood</h1>
+          <p class="about-subtitle text-3xl md:text-4xl">More Than Pots. A Way of Living.</p>
+        </div>
+      </div>
+    </section> 
+
+    <section class="about-content py-24  px-3 lg:px-8 max-w-7xl mx-auto" aria-label="Gyara Gyara story">
+      <div class="about-story lg:max-w-6xl mb-16 lg:mb-24">
+        <div class="about-card about_rightMain flex-col-reverse lg:flex-row about-row  border-4 border-gray-900 border-e-0 rounded-tl-2xl rounded-bl-2xl ">
+          <div class="p-3 lg:p-16 ">
+            <p class="about-copy text-xl  lg:text-3xl">At 11.11, we believe that the true beauty lies in its imperfections. Our collection of wooden objects speaks the language of time - slowly and thoughtfully through reverence. Each piece is born from a carefully chosen piece of wood, some over 70 years old.</p>
+          </div>
+          <img class="about-image !aspect-square lg:max-w-[500px] rounded-lg lg:rounded-xl" alt="Wooden handmade bowls and sculptural decor"
+            src="images/aboutStory1.webp"
+            loading="lazy" width="500" height="320" />
+        </div> 
+        <div class="about-after items-end lg:align-start justify-end flex-col-reverse sm:flex-row lg:flex-row">
+          <div class="max-w-3xl p-4 lg:p-8">
+            <p class="about-copy text-center sm:text-right text-xl lg:text-3xl">Our commitment to authenticity is reflected in our process, each piece is carefully shaped, smoothed and polished, preserving the woods true tones and veins.
+          </p>
+          </div>
+          <div class="sm:self-stretch mx-w-0.5 ps-6  border-4 border-gray-900 border-s-0 rounded-tr-2xl rounded-br-2xl rounded-bl-0 overflow-hidden -mt-1 sm:shrink-0 z-10">
+            <div class="about-stat bg-[#F4E6D1] flex items-center justify-end flex-col h-full rounded-bl-2xl">
+              <span class="about-stat__number font-bold text-lg lg:text-xl" data-counter="250" data-counter-suffix="+">0+</span>
+              <span class="about-stat__label text-md lg:text-lg">Happy<br />Customers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-card about-feature max-w-5xl p-3 lg:p-6 rounded-xl border-[1px] bg-[#F4E6D1] border-gray-900 ms-auto  mb-16 lg:mb-24">
+        <svg class="absolute top-3 left-3 lg:top-6 lg:left-6 w-6 h-6 lg:w-12 lg:h-12"  viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.9181 17.9289C40.5224 17.2401 39.6351 16.9981 38.9364 17.3884C38.2377 17.7785 37.9922 18.6533 38.3881 19.3421L40.9181 17.9289ZM32.4864 12.9592C33.054 13.5193 33.9747 13.5197 34.5427 12.9602C35.1108 12.4007 35.1113 11.4931 34.5437 10.933L32.4864 12.9592ZM15.5481 33.7323L7.56706 25.8564L5.50972 27.8825L13.4907 35.7586L15.5481 33.7323ZM31.1238 24.9277L27.4072 26.3044L28.43 28.9882L32.1467 27.6115L31.1238 24.9277ZM15.0972 14.1245L16.4436 10.5019L13.713 9.51565L12.3667 13.1383L15.0972 14.1245ZM9.29655 19.3933C10.6759 19.0183 11.7254 18.7549 12.5836 18.1458L10.8845 15.8192C10.5492 16.0572 10.114 16.1973 8.52365 16.6295L9.29655 19.3933ZM12.3667 13.1383C11.7987 14.6664 11.621 15.0835 11.3528 15.3938L13.5661 17.2533C14.2519 16.46 14.6045 15.4501 15.0972 14.1245L12.3667 13.1383ZM12.5836 18.1458C12.9463 17.8884 13.2762 17.5887 13.5661 17.2533L11.3528 15.3938C11.2145 15.5537 11.0573 15.6965 10.8845 15.8192L12.5836 18.1458ZM27.4072 26.3044C26.0712 26.7992 25.0528 27.1541 24.2548 27.8353L26.1586 30.0027C26.4704 29.7364 26.8899 29.5587 28.43 28.9882L27.4072 26.3044ZM24.9212 32.7789C25.358 31.214 25.4997 30.7851 25.7403 30.4543L23.3776 28.7831C22.7624 29.6284 22.4963 30.6609 22.1172 32.0185L24.9212 32.7789ZM24.2548 27.8353C23.9259 28.1163 23.6314 28.4343 23.3776 28.7831L25.7403 30.4543C25.8614 30.288 26.0018 30.1364 26.1586 30.0027L24.2548 27.8353ZM7.56706 25.8564C6.31441 24.6202 5.46493 23.7787 4.91372 23.096C4.36057 22.4108 4.30346 22.1142 4.30261 21.9811L1.39462 21.9993C1.40176 23.112 1.96227 24.0438 2.63839 24.8813C3.31643 25.7211 4.30786 26.6964 5.50972 27.8825L7.56706 25.8564ZM8.52365 16.6295C6.88503 17.075 5.53467 17.4396 4.52463 17.8395C3.51738 18.2379 2.56305 18.7754 1.99961 19.7398L4.51961 21.1706C4.58672 21.0557 4.78433 20.8258 5.60803 20.4999C6.42895 20.175 7.58856 19.8575 9.29655 19.3933L8.52365 16.6295ZM4.30261 21.9811C4.30078 21.6966 4.37572 21.4169 4.51961 21.1706L1.99961 19.7398C1.59832 20.4267 1.38954 21.2065 1.39462 21.9993L4.30261 21.9811ZM13.4907 35.7586C14.7002 36.9522 15.6948 37.9366 16.5513 38.6092C17.4054 39.2799 18.3571 39.8355 19.4936 39.8372L19.4979 36.9703C19.3633 36.9701 19.0619 36.9155 18.3632 36.3667C17.6668 35.8199 16.8087 34.9765 15.5481 33.7323L13.4907 35.7586ZM22.1172 32.0185C21.6438 33.7147 21.3201 34.8666 20.9883 35.6816C20.6553 36.4994 20.4203 36.6943 20.3028 36.7605L21.7442 39.2504C22.731 38.6952 23.2801 37.7488 23.687 36.7494C24.0951 35.7473 24.4669 34.4064 24.9212 32.7789L22.1172 32.0185ZM19.4936 39.8372C20.2828 39.8383 21.0587 39.6361 21.7442 39.2504L20.3028 36.7605C20.0576 36.8985 19.7801 36.9707 19.4979 36.9703L19.4936 39.8372ZM32.1467 27.6115C34.786 26.6339 36.9223 25.8466 38.4403 25.016C39.9812 24.173 41.2151 23.1109 41.5833 21.4324L38.741 20.8265C38.6359 21.3051 38.2912 21.8187 37.0291 22.5092C35.7443 23.2122 33.8537 23.9167 31.1238 24.9277L32.1467 27.6115ZM29.6055 6.05972C27.5972 4.07786 25.9764 2.47304 24.5738 1.44642C23.1513 0.405299 21.652 -0.268475 19.9424 0.103359L20.569 2.90292C21.0531 2.79761 21.6719 2.89308 22.8404 3.74827C24.0286 4.61797 25.4716 6.03653 27.5481 8.08587L29.6055 6.05972ZM16.4436 10.5019C17.4549 7.78101 18.1598 5.89514 18.8676 4.61292C19.5636 3.35193 20.0847 3.00827 20.569 2.90292L19.9424 0.103359C18.2333 0.475136 17.1602 1.70814 16.3132 3.24261C15.4779 4.75584 14.691 6.88423 13.713 9.51565L16.4436 10.5019ZM38.3881 19.3421C38.7784 20.0213 38.823 20.4525 38.741 20.8265L41.5833 21.4324C41.8588 20.1767 41.547 19.0229 40.9181 17.9289L38.3881 19.3421ZM27.5481 8.08587L32.4864 12.9592L34.5437 10.933L29.6055 6.05972L27.5481 8.08587Z" fill="black"/>
+<path d="M0.425345 38.6456C-0.142188 39.2056 -0.141723 40.1133 0.426392 40.6729C0.994507 41.2323 1.91516 41.2319 2.48269 40.6717L0.425345 38.6456ZM11.5039 31.7693C12.0714 31.2091 12.071 30.3015 11.5028 29.7421C10.9347 29.1826 10.0141 29.183 9.44654 29.743L11.5039 31.7693ZM2.48269 40.6717L11.5039 31.7693L9.44654 29.743L0.425345 38.6456L2.48269 40.6717Z" fill="black"/>
+</svg>
+        <img class="about-feature__image" alt="People gathered around a craft table"
+          src="images/AboutFeatured.webp"
+          loading="lazy" width="800" height="320" />
+        <div class="about-inset">
+          <p class="about-copy  text-xl lg:text-2xl">What began as a simple hobby in 2021 slowly grew into something far greater than we had
+            imagined.</p>
+          <p class="about-copy text-xl lg:text-2xl">We started by channeling our creativity into stationery, diaries, planners, and notepads
+            but the response wasn't what we had hoped for, and things didn't quite take off.</p>
+          <p class="about-copy text-xl lg:text-2xl">Rather than giving up, we chose to evolve. Driven by curiosity and a desire to explore
+            new mediums, we shifted our focus to handcrafted concrete decor creating planters, trays, candle holders,
+            and more.</p>
+        </div>
+        </div>
+
+
+
+
+<div class="about-story lg:max-w-6xl mb-16 lg:mb-24">
+  <div class="about-card about_leftMain flex-col-reverse lg:flex-row-reverse about-row  border-4 border-gray-900 border-s-0 rounded-tr-2xl rounded-br-2xl">
+    <div class="p-3 lg:p-16 ">
+      <p class="about-copy text-xl  lg:text-3xl">We took our work to local flea markets, unsure of what to expect. To our surprise, people connected with it they supported us and spread the word.</p>
+    </div>
+
+<img class="about-image !aspect-square lg:max-w-[500px] rounded-lg lg:rounded-xl" alt="Wooden decor object on a pedestal" src="images/aboutStory2.webp" loading="lazy" width="400" height="320">
+
+  </div> 
+  <div class="about-after items-start lg:align-start justify-end flex-col-reverse sm:flex-row-reverse">
+    <div class="max-w-3xl p-4 lg:p-8">
+      <p class="about-copy text-center sm:text-left text-xl lg:text-3xl">After two years with concrete, we made a bold shift to wood crafting every detail ourselves and finally found our true material.
+    </p>
+    </div>
+    <div class="sm:self-stretch mx-w-0.5 pe-6 border-4 border-gray-900 border-e-0 rounded-tl-2xl rounded-bl-2xl rounded-br-0 overflow-hidden -mt-1 sm:shrink-0 z-10">
+      <div class="about-stat stat_Revrse bg-[#F4E6D1] flex items-center justify-end flex-col h-full rounded-br-2xl">
+        <span class="about-stat__number font-bold text-lg lg:text-xl" data-counter="4.5" data-counter-suffix="+">4.5+</span>
+        <span class="about-stat__label text-md lg:text-lg">Review<br>Rate</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="about-story lg:max-w-6xl mb-16 lg:mb-24 ms-auto">
+        <div class="about-card about_rightMain flex-col-reverse lg:flex-row about-row  border-4 border-gray-900 border-e-0 rounded-tl-2xl rounded-bl-2xl ">
+          <div class="p-3 lg:p-16 ">
+            <p class="about-copy text-xl  lg:text-3xl">We've come a long way from where we started, and while there's still a long road ahead,
+            we're proud of every step in this journey. Each step has shaped not just our craft, but who we are as
+            creators.</p>
+          </div>
+          <img class="about-image !aspect-square lg:max-w-[500px] rounded-lg lg:rounded-xl" alt="Wooden handmade bowls and sculptural decor" src="images/aboutStory3.webp" loading="lazy" width="500" height="320">
+        </div> 
+        <div class="about-after items-end lg:align-start justify-end flex-col-reverse sm:flex-row lg:flex-row">
+          <div class="max-w-3xl p-4 lg:p-8">
+            <p class="about-copy text-center sm:text-right text-xl lg:text-3xl">Every piece we make carries a part of the story of trials, transitions and the joy of creating something with our own hands.
+          </p>
+          </div>
+          <div class="sm:self-stretch mx-w-0.5 ps-6  border-4 border-gray-900 border-s-0 rounded-tr-2xl rounded-br-2xl rounded-bl-0 overflow-hidden -mt-1 sm:shrink-0 z-10">
+            <div class="about-stat bg-[#F4E6D1] flex items-center justify-end flex-col h-full rounded-bl-2xl">
+              <span class="about-stat__number font-bold text-lg lg:text-xl" data-counter="4000" data-counter-suffix="+">4000+</span>
+              <span class="about-stat__label text-md lg:text-lg">Products<br>Sold</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="about-card  about-statement relative max-w-5xl p-8 lg:p-20 rounded-xl border-[1px] bg-[#F4E6D1] border-gray-900 mx-auto  mb-16 lg:mb-24">
+        <svg class="absolute top-3 right-3 lg:top-6 lg:right-6 w-6 h-6 lg:w-12 lg:h-12" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.9181 17.9289C40.5224 17.2401 39.6351 16.9981 38.9364 17.3884C38.2377 17.7785 37.9922 18.6533 38.3881 19.3421L40.9181 17.9289ZM32.4864 12.9592C33.054 13.5193 33.9747 13.5197 34.5427 12.9602C35.1108 12.4007 35.1113 11.4931 34.5437 10.933L32.4864 12.9592ZM15.5481 33.7323L7.56706 25.8564L5.50972 27.8825L13.4907 35.7586L15.5481 33.7323ZM31.1238 24.9277L27.4072 26.3044L28.43 28.9882L32.1467 27.6115L31.1238 24.9277ZM15.0972 14.1245L16.4436 10.5019L13.713 9.51565L12.3667 13.1383L15.0972 14.1245ZM9.29655 19.3933C10.6759 19.0183 11.7254 18.7549 12.5836 18.1458L10.8845 15.8192C10.5492 16.0572 10.114 16.1973 8.52365 16.6295L9.29655 19.3933ZM12.3667 13.1383C11.7987 14.6664 11.621 15.0835 11.3528 15.3938L13.5661 17.2533C14.2519 16.46 14.6045 15.4501 15.0972 14.1245L12.3667 13.1383ZM12.5836 18.1458C12.9463 17.8884 13.2762 17.5887 13.5661 17.2533L11.3528 15.3938C11.2145 15.5537 11.0573 15.6965 10.8845 15.8192L12.5836 18.1458ZM27.4072 26.3044C26.0712 26.7992 25.0528 27.1541 24.2548 27.8353L26.1586 30.0027C26.4704 29.7364 26.8899 29.5587 28.43 28.9882L27.4072 26.3044ZM24.9212 32.7789C25.358 31.214 25.4997 30.7851 25.7403 30.4543L23.3776 28.7831C22.7624 29.6284 22.4963 30.6609 22.1172 32.0185L24.9212 32.7789ZM24.2548 27.8353C23.9259 28.1163 23.6314 28.4343 23.3776 28.7831L25.7403 30.4543C25.8614 30.288 26.0018 30.1364 26.1586 30.0027L24.2548 27.8353ZM7.56706 25.8564C6.31441 24.6202 5.46493 23.7787 4.91372 23.096C4.36057 22.4108 4.30346 22.1142 4.30261 21.9811L1.39462 21.9993C1.40176 23.112 1.96227 24.0438 2.63839 24.8813C3.31643 25.7211 4.30786 26.6964 5.50972 27.8825L7.56706 25.8564ZM8.52365 16.6295C6.88503 17.075 5.53467 17.4396 4.52463 17.8395C3.51738 18.2379 2.56305 18.7754 1.99961 19.7398L4.51961 21.1706C4.58672 21.0557 4.78433 20.8258 5.60803 20.4999C6.42895 20.175 7.58856 19.8575 9.29655 19.3933L8.52365 16.6295ZM4.30261 21.9811C4.30078 21.6966 4.37572 21.4169 4.51961 21.1706L1.99961 19.7398C1.59832 20.4267 1.38954 21.2065 1.39462 21.9993L4.30261 21.9811ZM13.4907 35.7586C14.7002 36.9522 15.6948 37.9366 16.5513 38.6092C17.4054 39.2799 18.3571 39.8355 19.4936 39.8372L19.4979 36.9703C19.3633 36.9701 19.0619 36.9155 18.3632 36.3667C17.6668 35.8199 16.8087 34.9765 15.5481 33.7323L13.4907 35.7586ZM22.1172 32.0185C21.6438 33.7147 21.3201 34.8666 20.9883 35.6816C20.6553 36.4994 20.4203 36.6943 20.3028 36.7605L21.7442 39.2504C22.731 38.6952 23.2801 37.7488 23.687 36.7494C24.0951 35.7473 24.4669 34.4064 24.9212 32.7789L22.1172 32.0185ZM19.4936 39.8372C20.2828 39.8383 21.0587 39.6361 21.7442 39.2504L20.3028 36.7605C20.0576 36.8985 19.7801 36.9707 19.4979 36.9703L19.4936 39.8372ZM32.1467 27.6115C34.786 26.6339 36.9223 25.8466 38.4403 25.016C39.9812 24.173 41.2151 23.1109 41.5833 21.4324L38.741 20.8265C38.6359 21.3051 38.2912 21.8187 37.0291 22.5092C35.7443 23.2122 33.8537 23.9167 31.1238 24.9277L32.1467 27.6115ZM29.6055 6.05972C27.5972 4.07786 25.9764 2.47304 24.5738 1.44642C23.1513 0.405299 21.652 -0.268475 19.9424 0.103359L20.569 2.90292C21.0531 2.79761 21.6719 2.89308 22.8404 3.74827C24.0286 4.61797 25.4716 6.03653 27.5481 8.08587L29.6055 6.05972ZM16.4436 10.5019C17.4549 7.78101 18.1598 5.89514 18.8676 4.61292C19.5636 3.35193 20.0847 3.00827 20.569 2.90292L19.9424 0.103359C18.2333 0.475136 17.1602 1.70814 16.3132 3.24261C15.4779 4.75584 14.691 6.88423 13.713 9.51565L16.4436 10.5019ZM38.3881 19.3421C38.7784 20.0213 38.823 20.4525 38.741 20.8265L41.5833 21.4324C41.8588 20.1767 41.547 19.0229 40.9181 17.9289L38.3881 19.3421ZM27.5481 8.08587L32.4864 12.9592L34.5437 10.933L29.6055 6.05972L27.5481 8.08587Z" fill="black"></path>
+        <path d="M0.425345 38.6456C-0.142188 39.2056 -0.141723 40.1133 0.426392 40.6729C0.994507 41.2323 1.91516 41.2319 2.48269 40.6717L0.425345 38.6456ZM11.5039 31.7693C12.0714 31.2091 12.071 30.3015 11.5028 29.7421C10.9347 29.1826 10.0141 29.183 9.44654 29.743L11.5039 31.7693ZM2.48269 40.6717L11.5039 31.7693L9.44654 29.743L0.425345 38.6456L2.48269 40.6717Z" fill="black"></path>
+        </svg>
+        <p class="about-copy text-center text-2xl lg:text-3xl">Our Collections are for those who see beauty in natural world. The best part of our
+          creations lies not in perfections but in imperfections that tells a story. Slowly, deliberately with the utmost
+          care, this is the philosophy that drives everything we do.</p>
+        <br />
+        <p class="about-copy text-center text-2xl lg:text-3xl">Welcome to a world where time slows and natures beauty is brought to life, in the form of
+          timeless objects.</p>
+      </div>
+
+      <div class="about-action">
+        <a class="about-button font-serif text-xl lg:text-2xl" href="shop_now.html">Discover More</a>
+      </div>
+
+      <div class="about-placeholders" aria-hidden="true">
+        <div class="about-placeholder"></div>
+        <div class="about-placeholder"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="mainFooter" class="overflow-hidden relative">
+
+    <div
+      class="absolute left-0 bottom-0 translate-y-[34%] translate-x-[-30%] flex items-end gap-[2vw] opacity-80 pointer-events-none select-none z-10">
+      <img src="images/FooterGraphic1.svg" alt="" aria-hidden="true" class="h-[75vh] md:h-[90vh] w-auto shrink-0" />
+
+      <img src="images/FooterGraphic2.svg" alt="" aria-hidden="true" class="h-[50vh] md:h-[60vh] w-auto shrink-0" />
+    </div>
+
+    <!-- Top Right Graphic -->
+    <div class="absolute top-[5%] right-0 translate-x-[68%] z-10 pointer-events-none select-none">
+
+      <img src="images/FooterGraphic3.svg" alt="" aria-hidden="true"
+        class="relative z-20 w-[60vh] md:w-[60vh] lg:w-[650px] opacity-80" />
+
+      <!-- Solid Circle -->
+      <div
+        class="absolute top-1/2 left-[2%]  -translate-y-[70%] w-[180px] h-[180px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[360px] rounded-full bg-white/50 opacity-70 z-10">
+      </div>
+
+    </div>
+
+    <div class="px-3 lg:px-8 text-3xl tracking-widest font-bold mb-16 max-w-7xl mx-auto">
+      <div class="w-full h-px bg-outline/30 border-t border-gray-300 mb-16"></div>
+      <img src="images/GyaraGyaraLogo2.svg" alt="Logo" width="200" height="200" class="relative mx-auto z-20">
+    </div>
+    <!-- Reusable Footer Component â€” Injected by critical.js -->
+    <div class="bg-primary text-white py-16 px-3 lg:px-8 relative " role="contentinfo">
+      <!-- Decorative background elements -->
+      <!-- Left Graphic -->
+
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <h3 class="font-bodyPoppins text-2xl lg:text-3xl mb-16">How can we help? <br /> contact us anytime
+        </h3>
+        <div class="space-y-4 mb-24">
+          <p class="text-lg lg:text-2xl">Contact us on : <a href="tel:+918156087656"
+              class="hover:text-gray-300 transition-colors">+91
+              8156087656</a></p>
+          <p class="text-lg lg:text-2xl"><a href="mailto:hello11.11india@gmail.com"
+              class="hover:text-gray-300 transition-colors">hello11.11india@gmail.com</a></p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <a class="hover:text-white mb-4 md:mb-0 transition-colors" href="#">Terms and Condition</a>
+          <div class="flex items-center gap-4">
+            <span>Follow Us</span>
+            <a class="hover:text-white transition-colors" href="https://www.instagram.com/gyaragyara.india/"
+              target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+              <svg class="lucide lucide-instagram" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a class="hover:text-white transition-colors" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Follow us on LinkedIn">
+              <svg class="lucide lucide-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect height="12" width="4" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/critical.js?v=4" defer></script>
+  <script src="js/script.js?v=4" defer></script>
+</body>
+
+</html>

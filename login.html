@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sign In — Gyara Gyara</title>
+  <meta name="description" content="Sign in to your Gyara Gyara account." />
+  <link rel="canonical" href="https://gyaragyara.com/login.html" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#FFF7EA',
+            'gg-dark': '#1a2b42',
+            'gg-light': '#fdfaf2',
+            'gg-accent': '#e5dfd3',
+            'gg-text': '#333333',
+            primary: '#1a2a40',
+          },
+          fontFamily: {
+            'sans': ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            'serif': ['"Newsreader"', '"Times New Roman"', 'Times', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <style data-purpose="custom-utilities">
+    body {
+      background-color: #fdfaf2;
+      color: #333;
+    }
+
+    .top-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M200 100C144.772 100 100 55.2285 100 0H0C0 110.457 89.543 200 200 200V100Z" fill="%23e5dfd3" fill-opacity="0.3"/></svg>');
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .input-field {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      background-color: transparent;
+      transition: border-color 0.2s;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #1a2b42;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased relative min-h-screen flex flex-col" data-page="login">
+  <div class="top-pattern" aria-hidden="true"></div>
+
+<header id="mainNavbar">
+    <!-- Reusable Navbar Component — Injected by critical.js -->
+    <a href="#page-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="fixed inset-0 bg-black/15 z-40 opacity-0 invisible transition-all duration-300" id="offcanvasOverlay" aria-hidden="true"></div>
+    <nav class="fixed top-[87px] left-0 w-[180px] md:w-[280px] bg-surface rounded-br-[48px] shadow-[0_8px_32px_rgba(0,0,0,0.08)] z-50 -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col" id="offcanvasMenu" role="navigation" aria-label="Mobile Navigation">
+      <div class="flex flex-col w-full mt-4 mobileNav">
+        <a href="index.html" data-nav="home"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          HOME 
+        </a>
+
+        <a href="shop_now.html" data-nav="shop"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          SHOP NOW
+        </a>
+
+        <a href="about.html" data-nav="about"
+          class="relative inline-block uppercase text-[18px] font-medium tracking-[0.02em] pb-6 mb-6 hover:opacity-75 transition-opacity after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-16 after:h-px after:bg-black/40">
+          ABOUT US
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Navbar -->
+    <div class="bg-primary text-gray-950 md:text-white py-4 px-3 lg:px-8 sticky top-0 z-50 transition-all duration-300" id="navbarInner" role="banner">
+      <div class="max-w-7xl mx-auto flex justify-between gap-1  lg:grid lg:grid-cols-3 items-center">
+
+        <!-- Left Navigation & Hamburger -->
+        <div class="flex items-center ">
+          <!-- Desktop Navigation -->
+          <nav class="gg-nav-desktop hidden md:flex gap-6 text-sm uppercase tracking-wider"
+            aria-label="Main Navigation">
+            <a class="hover:text-gray-300 transition-colors" href="index.html" data-nav="home">Home</a>
+            <a class="hover:text-gray-300 transition-colors" href="shop_now.html" data-nav="shop">Shop Now</a>
+            <a class="hover:text-gray-300 transition-colors" href="about.html" data-nav="about">About Us</a>
+          </nav>
+
+          <!-- Mobile Hamburger -->
+          <button class="gg-hamburger md:hidden " id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"
+            aria-controls="offcanvasMenu"> 
+            <svg width="55" height="55" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" style="transform-origin: 50% 50%; transform: scaleX(1) scaleY(1) rotate(0deg);">
+            <path d="M13.5 16C13.9142 16 14.25 16.3358 14.25 16.75C14.25 17.1642 13.9142 17.5 13.5 17.5H10.5C10.0858 17.5 9.75 17.1642 9.75 16.75C9.75 16.3358 10.0858 16 10.5 16H13.5ZM16.5 11C16.9142 11 17.25 11.3358 17.25 11.75C17.25 12.1642 16.9142 12.5 16.5 12.5H7.5C7.08579 12.5 6.75 12.1642 6.75 11.75C6.75 11.3358 7.08579 11 7.5 11H16.5ZM19.5 6C19.9142 6 20.25 6.33579 20.25 6.75C20.25 7.16421 19.9142 7.5 19.5 7.5H4.5C4.08579 7.5 3.75 7.16421 3.75 6.75C3.75 6.33579 4.08579 6 4.5 6H19.5Z" fill="#212121" style="fill:CurrentColor;stroke:none" stroke="none" class=""></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center Logo -->
+        <div class="flex justify-center -mr-[24px]">
+          <a href="index.html" class="flex flex-col items-center justify-center text-center text-gray-950 md:text-white"
+            aria-label="Gyara Gyara Home">
+            <!-- Stylized GG Logo -->
+            <svg width="124" height="55" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+              id="a" viewBox="0 0 473.17 206.81">
+              <g id="b">
+                <g id="c">
+                  <path
+                    d="M215.45,44.74h-16.49c-1.54,0-2.16-.42-2.1-2,.11-2.58.09-5.17,0-7.76,0-1.42.58-1.86,1.9-1.85h26.47c1.1,0,1.31.56,1.46,1.42,2.95,14.52-6.44,28.68-20.96,31.63-2.46.5-4.97.65-7.47.45-14.78-1.08-27.13-13.38-28.51-28.36-1.52-18.73,11.92-35.35,30.55-37.79,15.06-2.16,27.33,2.91,36.21,15.3,6.15,8.59,8.17,18.38,6.74,28.82s-6.39,19.08-13.79,26.4c-4.76,4.7-7.78,10.22-7.9,17-.16,9.76,6.65,18,16.54,20.34,9.58,2.25,18.25-.9,23.84-8.7,2.01-2.81,3.11-6.18,3.13-9.64,0-1.67-.58-1.92-2-1.91-7,.06-13.94,0-20.9.06-1.45,0-2.13-.21-2-1.89.15-2.71.08-5.44,0-8.16,0-1.08.24-1.49,1.42-1.49h33.43c.77,0,1.46-.06,1.45,1.06,0,6.28.74,12.57-.73,18.82-3.22,14.11-15.53,24.3-30,24.81-14.43.47-25.7-5.33-32.21-18.31-6.38-12.73-4.18-25,4.09-36.42,2.93-4,6.87-7.17,9.67-11.33,7.8-11.63,6.08-28-4-37-13.79-12.24-36.9-5.54-41.29,11.92-3.07,12.24,6.78,24.9,19.11,24.55,5.4-.15,12.17-4.78,14.34-9.97Z" />
+                  <path
+                    d="M22.42,206.81c-7.13,0-12.65-2.06-16.56-6.17C1.95,196.53,0,190.72,0,183.21c0-7.1,2.06-12.87,6.18-17.3,4.12-4.43,9.49-6.65,16.11-6.64,5.11,0,10.15,1.21,14.71,3.51l.71,10.38h-1.83l-2.5-4c-2.74-4.19-6.44-6.28-11.09-6.28-4.39-.09-8.53,2.04-11,5.67-2.8,3.77-4.2,8.7-4.2,14.77,0,6.07,1.46,10.86,4.39,14.36,2.86,3.54,7.23,5.51,11.77,5.32,3.85,0,6.65-.75,8.4-2.23v-9.47c.04-.77-.19-1.53-.64-2.16-.65-.68-1.47-1.19-2.37-1.48l-2.64-1.15v-1.82h15.58v1.82l-1.48.88c-1.19.69-1.86,2.01-1.73,3.37v11.24c-4.01,3.21-9.32,4.81-15.95,4.81Z" />
+                  <path
+                    d="M74.76,206.14h-18.19v-1.82l2.88-1.22c.87-.31,1.66-.81,2.31-1.48.41-.61.62-1.35.57-2.09v-10.66l-12.33-22.52c-.44-.87-.95-1.71-1.53-2.49-.45-.48-1-.85-1.61-1.08l-2.24-1v-1.82h16.94v1.82l-2.11.88c-1.54.68-2.31,1.33-2.31,2,.05.71.27,1.4.65,2l9.6,17.53,8.91-17.39c.34-.62.56-1.3.64-2,.01-.42-.16-.83-.48-1.11-.59-.44-1.25-.78-1.95-1l-2.25-.88v-1.82h14v1.82l-2.56,1.08c-.6.26-1.14.63-1.61,1.08-.51.61-.94,1.28-1.28,2l-11.75,22.3v11.26c-.05.74.16,1.48.58,2.09.62.66,1.39,1.17,2.24,1.48l2.88,1.22v1.82Z" />
+                  <path
+                    d="M98.85,206.14h-14v-1.82l2.5-1.08c.76-.25,1.45-.69,2-1.28.54-.76.97-1.61,1.25-2.5l14.29-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.18,2.33.59.53,1.27.95,2,1.24l2.3,1v1.82h-17v-1.82l2.11-.88c1.67-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.45-1.82l-2.56-7h-17.98l-2.43,6.81c-.26.64-.43,1.31-.51,2,0,.42.2.82.54,1.08.65.47,1.38.84,2.15,1.08l2.24.88v1.85ZM105.64,167.83l-7.49,21.11h15.24l-7.75-21.11Z" />
+                  <path
+                    d="M153.05,206.14h-17.17v-1.82l2.5-1.08c.79-.33,1.5-.84,2.05-1.49.39-.67.56-1.45.51-2.22v-33c.06-.8-.12-1.59-.51-2.29-.55-.64-1.26-1.13-2.05-1.42l-2.5-1.08v-1.82h18.58c5.16,0,9.18,1.14,12.07,3.41,2.88,2.25,4.49,5.76,4.33,9.41.08,2.93-.94,5.78-2.85,8-2.1,2.33-4.87,3.95-7.92,4.66,1.5.79,2.72,2.04,3.46,3.57l6,10.86c.41.85.98,1.62,1.67,2.26.73.59,1.55,1.06,2.43,1.38l2.31.94v1.76h-10.68l-8.77-15.92c-1.41-2.47-2.57-3.8-3.46-4h-5.38v13.29c-.05.78.16,1.55.6,2.19.64.67,1.41,1.19,2.28,1.52l2.5,1.08v1.81ZM147.67,163.38v19.42h5.83c2.73.1,5.38-.93,7.33-2.83,1.91-1.9,2.94-4.52,2.85-7.21.07-2.54-.97-4.99-2.85-6.71-1.98-1.81-4.59-2.77-7.27-2.67h-5.89Z" />
+                  <path
+                    d="M193.73,206.14h-14v-1.82l2.49-1.08c.76-.25,1.45-.69,2-1.28.54-.77.96-1.61,1.25-2.5l14.28-38.84,4.87-1.35,15,40.46c.26.84.66,1.63,1.19,2.33.59.53,1.27.95,2,1.24l2.31,1v1.82h-17.12v-1.82l2.12-.88c1.66-.68,2.5-1.39,2.5-2.16-.05-.63-.2-1.24-.45-1.82l-2.57-7h-17.86l-2.43,6.81c-.26.64-.44,1.31-.52,2,0,.43.21.83.55,1.08.65.47,1.37.84,2.14,1.08l2.25.88v1.85ZM200.52,167.83l-7.52,21.11h15.25l-7.73-21.11Z" />
+                  <path
+                    d="M270.6,206.81c-7.13,0-12.65-2.06-16.56-6.17-3.91-4.11-5.87-9.92-5.86-17.43,0-7.1,2.06-12.87,6.18-17.3,4.12-4.43,9.49-6.65,16.11-6.64,5.1.01,10.12,1.22,14.67,3.51l.71,10.38h-1.8l-2.49-4c-2.74-4.19-6.44-6.28-11.09-6.28-4.39-.09-8.53,2.04-11,5.67-2.8,3.77-4.2,8.7-4.2,14.77s1.46,10.86,4.39,14.36c2.84,3.56,7.2,5.57,11.75,5.4,3.85,0,6.64-.75,8.4-2.23v-9.55c.04-.77-.19-1.53-.64-2.16-.65-.68-1.47-1.19-2.37-1.48l-2.63-1.15v-1.82h15.57v1.82l-1.48.88c-1.19.69-1.86,2.01-1.73,3.37v11.24c-3.99,3.21-9.3,4.81-15.93,4.81Z" />
+                  <path
+                    d="M322.94,206.14h-18.19v-1.82l2.88-1.22c.87-.31,1.66-.81,2.31-1.48.41-.61.62-1.35.57-2.09v-10.66l-12.3-22.52c-.44-.88-.95-1.71-1.54-2.49-.44-.48-.99-.85-1.6-1.08l-2.24-1v-1.82h16.91v1.82l-2.11.88c-1.54.68-2.31,1.33-2.31,2,.05.71.27,1.4.64,2l9.61,17.53,8.91-17.39c.34-.62.56-1.3.64-2,.01-.42-.16-.83-.48-1.11-.6-.45-1.28-.78-2-1l-2.24-.88v-1.82h14v1.82l-2.56,1.08c-.6.26-1.14.63-1.61,1.08-.51.61-.94,1.28-1.28,2l-11.72,22.32v11.26c-.05.74.16,1.48.58,2.09.62.66,1.39,1.17,2.24,1.48l2.88,1.22v1.8Z" />
+                  <path
+                    d="M347,206.14h-14v-1.82l2.5-1.08c.74-.26,1.41-.7,1.95-1.28.54-.76.97-1.61,1.25-2.5l14.3-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.18,2.33.59.53,1.26.95,2,1.24l2.3,1v1.82h-17v-1.82l2.12-.88c1.66-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.45-1.82l-2.56-7h-17.96l-2.43,6.81c-.26.64-.43,1.31-.51,2,0,.42.2.82.54,1.08.65.47,1.38.84,2.15,1.08l2.24.88v1.85ZM353.79,167.83l-7.5,21.11h15.25l-7.75-21.11Z" />
+                  <path
+                    d="M401.23,206.14h-17.17v-1.82l2.49-1.08c.8-.32,1.5-.83,2.06-1.49.39-.67.56-1.45.51-2.22v-33c.06-.8-.12-1.59-.51-2.29-.55-.64-1.26-1.13-2.06-1.42l-2.49-1.08v-1.82h18.57c5.17,0,9.19,1.14,12.08,3.41,2.88,2.25,4.49,5.76,4.33,9.41.08,2.93-.94,5.78-2.86,8-2.1,2.33-4.86,3.96-7.91,4.66,1.5.8,2.71,2.05,3.46,3.57l6,10.86c.41.85.98,1.62,1.67,2.26.73.59,1.55,1.06,2.43,1.38l2.31.94v1.76h-10.68l-8.78-15.92c-1.4-2.47-2.56-3.8-3.45-4h-5.39v13.29c-.04.78.17,1.55.61,2.19.64.67,1.41,1.19,2.28,1.52l2.5,1.08v1.81ZM395.84,163.38v19.42h5.83c2.72.1,5.37-.91,7.33-2.8,1.91-1.9,2.94-4.52,2.85-7.21.07-2.54-.97-4.99-2.85-6.71-1.98-1.81-4.59-2.77-7.27-2.67l-5.89-.03Z" />
+                  <path
+                    d="M441.91,206.14h-14v-1.82l2.49-1.08c.76-.25,1.45-.69,2-1.28.54-.77.96-1.61,1.25-2.5l14.28-38.84,4.87-1.35,15,40.46c.25.84.65,1.63,1.19,2.33.57.52,1.23.94,1.95,1.24l2.31,1v1.82h-17v-1.82l2.11-.88c1.67-.68,2.5-1.39,2.5-2.16-.04-.63-.19-1.24-.44-1.82l-2.57-7h-17.93l-2.44,6.81c-.26.64-.43,1.31-.51,2,0,.43.21.83.55,1.08.65.47,1.37.84,2.14,1.08l2.25.88v1.85ZM448.7,167.83l-7.5,21.11h15.25l-7.75-21.11Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex gap-4 items-center justify-end">
+          <!-- Wishlist -->
+          <a href="wishlist.html" class="hover:opacity-75 relative" aria-label="Wishlist" id="navWishlistBtn">
+            <svg class="w-6 h-6" fill="currentColor" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M4.24 12.25a4.2 4.2 0 0 1-1.24-3A4.25 4.25 0 0 1 7.25 5c1.58 0 2.96.86 3.69 2.14h1.12A4.24 4.24 0 0 1 15.75 5A4.25 4.25 0 0 1 20 9.25c0 1.17-.5 2.25-1.24 3L11.5 19.5zm15.22.71C20.41 12 21 10.7 21 9.25A5.25 5.25 0 0 0 15.75 4c-1.75 0-3.3.85-4.25 2.17A5.22 5.22 0 0 0 7.25 4A5.25 5.25 0 0 0 2 9.25c0 1.45.59 2.75 1.54 3.71l7.96 7.96z" />
+            </svg>
+            <span class="gg-cart-badge" id="wishlistCount" data-count="0"></span>
+          </a>
+          <!-- Cart -->
+          <a href="checkout.html" class="hover:opacity-75 relative" aria-label="Shopping Cart" id="navCartBtn">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16.5 21a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-8 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M3.71 5.4h15.214c1.378 0 2.373 1.27 1.995 2.548l-1.654 5.6C19.01 14.408 18.196 15 17.27 15H8.112c-.927 0-1.742-.593-1.996-1.452zm0 0L3 3" />
+            </svg>
+            <span class="gg-cart-badge" id="cartCount" data-count="0"></span>
+          </a>
+          <!-- Account -->
+          <a href="user_profile_dashboard.html" class="hover:opacity-75" aria-label="Your Account">
+            <svg class="w-6 h-6" fill="currentColor" stroke="currentColor" stroke-width="0.4" viewBox="0 0 24 24">
+              <path
+                d="M12 4a4 4 0 1 0 0 8a4 4 0 0 0 0-8M6 8a6 6 0 1 1 12 0A6 6 0 0 1 6 8m2 10a3 3 0 0 0-3 3a1 1 0 1 1-2 0a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5a1 1 0 1 1-2 0a3 3 0 0 0-3-3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="page-content" class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-lg shadow-sm border border-gray-200">
+      <div>
+        <h2 class="text-center text-3xl font-serif font-medium text-gg-dark">Sign in to your account</h2>
+        <p class="mt-2 text-center text-sm text-gray-600">
+          Or
+          <a href="register.html" class="font-medium text-gg-dark hover:underline">
+            create a new account
+          </a>
+        </p>
+      </div>
+      <form class="mt-8 space-y-6" id="loginForm">
+        <div class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <div class="mt-1">
+              <input id="email" name="email" type="email" autocomplete="email" required class="input-field"
+                placeholder="Enter your email">
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <div class="mt-1">
+              <input id="password" name="password" type="password" autocomplete="current-password" required
+                class="input-field" placeholder="Enter your password">
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox"
+              class="h-4 w-4 text-gg-dark focus:ring-gg-dark border-gray-300 rounded">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
+              Remember me
+            </label>
+          </div>
+
+          <div class="text-sm">
+            <a href="#" class="font-medium text-gg-dark hover:underline">
+              Forgot your password?
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gg-dark hover:bg-gg-dark/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gg-dark transition-colors">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer id="mainFooter" class="overflow-hidden relative">
+
+    <div
+      class="absolute left-0 bottom-0 translate-y-[34%] translate-x-[-30%] flex items-end gap-[2vw] opacity-80 pointer-events-none select-none z-10">
+      <img src="images/FooterGraphic1.svg" alt="" aria-hidden="true" class="h-[75vh] md:h-[90vh] w-auto shrink-0" />
+
+      <img src="images/FooterGraphic2.svg" alt="" aria-hidden="true" class="h-[50vh] md:h-[60vh] w-auto shrink-0" />
+    </div>
+
+    <!-- Top Right Graphic -->
+    <div class="absolute top-[5%] right-0 translate-x-[68%] z-10 pointer-events-none select-none">
+
+      <img src="images/FooterGraphic3.svg" alt="" aria-hidden="true"
+        class="relative z-20 w-[60vh] md:w-[60vh] lg:w-[650px] opacity-80" />
+
+      <!-- Solid Circle -->
+      <div
+        class="absolute top-1/2 left-[2%]  -translate-y-[70%] w-[180px] h-[180px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[360px] rounded-full bg-white/50 opacity-70 z-10">
+      </div>
+
+    </div>
+
+    <div class="px-3 lg:px-8 text-3xl tracking-widest font-bold mb-16 max-w-7xl mx-auto">
+      <div class="w-full h-px bg-outline-variant mb-16 border-t border-gray-300"></div>
+      <img src="images/GyaraGyaraLogo2.svg" alt="Logo" width="200" height="200" class="relative mx-auto z-20">
+    </div>
+    <!-- Reusable Footer Component — Injected by critical.js -->
+    <div class="bg-primary text-white py-16 px-3 lg:px-8 relative " role="contentinfo">
+      <!-- Decorative background elements -->
+      <!-- Left Graphic -->
+
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <h3 class="font-bodyPoppins text-2xl lg:text-3xl mb-16">How can we help? <br /> contact us anytime
+        </h3>
+        <div class="space-y-4 mb-24">
+          <p class="text-lg lg:text-2xl">Contact us on : <a href="tel:+918156087656"
+              class="hover:text-gray-300 transition-colors">+91
+              8156087656</a></p>
+          <p class="text-lg lg:text-2xl"><a href="mailto:hello11.11india@gmail.com"
+              class="hover:text-gray-300 transition-colors">hello11.11india@gmail.com</a></p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <a class="hover:text-white mb-4 md:mb-0 transition-colors" href="#">Terms and Condition</a>
+          <div class="flex items-center gap-4">
+            <span>Follow Us</span>
+            <a class="hover:text-white transition-colors" href="https://www.instagram.com/gyaragyara.india/"
+              target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+              <svg class="lucide lucide-instagram" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a class="hover:text-white transition-colors" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Follow us on LinkedIn">
+              <svg class="lucide lucide-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect height="12" width="4" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/critical.js?v=4" defer></script>
+  <script src="js/script.js?v=4" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          window.location.href = 'user_profile_dashboard.html';
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

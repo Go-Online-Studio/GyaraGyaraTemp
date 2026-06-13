@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "name": "Ethera Vase - B",
+    "slug": "ethera-vase-b",
+    "category": "japandi",
+    "price": 10,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZJyG5J3GGrl5S8oI6VjUWSYm1esMAyVLYl-W-pomvINdpVIG16pKMNQbAF69SIigLyCI9ZAvEr8vm2jeFZvl4xdAsIoittCbIffcbyDd1xH7J1Xox2B4a66qoTgDtLvXcmojz-z8944Cg7TLfVuT6JuhjCmISCyFOCLXQqvZxjEvblGFH-JRu7EFiUghildAPG8GEemQGZAFuRxBtRCJAhfWXcjm1JIHWWo_3hKFsJlZWxr6bOnlDLWlvJg4u29uy_PwjpojJe869",
+    "description": "A sculptural vase with a curvy silhouette, showcasing warm natural wood grain. Perfect for modern minimalist interiors.",
+    "artist": "Gyara Gyara Studio",
+    "featured": true,
+    "specs": {
+      "material": "Wood",
+      "length": "12 in",
+      "color": "Natural Brown",
+      "width": "8 in",
+      "texture": "Smooth Wooden",
+      "height": "15 in"
+    },
+    "inventory": 13
+  },
+  {
+    "id": 2,
+    "name": "Ethera Vase - C",
+    "slug": "ethera-vase-c",
+    "category": "japandi",
+    "price": 10,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB33jrA3elcESPEQfp5sMgjHLB4aMKQXuZNgDx_STeRDgzVtp5ufpW39uBg0Ry-3n4-L3tRo6Iy20m9C3OT5RrweWDrv4Rfq6Ektk8gbU6oueiV9hOSHPKLpnNZfyFTDCi3fvrkSd3oCsFPKAdj_YWijh3gdrLGc9b7-YiHue9r4iu_5BdrI6IZZ27SdwqaMy5ZI-aGzNQvoQ2tfMn8_nYgZlSabGLFhsRWaPSEaIMRUz78toxyCj5Gext0-kCItCvi8aBjJQfvOg4V",
+    "description": "Elegant double gourd form vase with concentric ring details. Handcrafted from aged wood with natural grain patterns.",
+    "artist": "Gyara Gyara Studio",
+    "featured": true,
+    "specs": {
+      "material": "Wood",
+      "length": "10 in",
+      "color": "Warm Brown",
+      "width": "10 in",
+      "texture": "Wooden",
+      "height": "14 in"
+    },
+    "inventory": 11
+  },
+  {
+    "id": 3,
+    "name": "Ethera Vase - D",
+    "slug": "ethera-vase-d",
+    "category": "elementary",
+    "price": 10,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDURVnMXWim9Ao2_Y5ClxOF7vwNCxtK3f37MouypwJNUZXHa0mkHHBad3701pAQjxfAeN6nbPMVb_cYATZh032A0Akuix2fu-h3OCh_-1RlTKABWntsJwplSGLv8uCcNeNJoH7LGpwI6vOP9FGpGaDxtOY5E4eQH0aEF-TGzbWydcbENY5OXXbog6MO6xJEaykQ7QjWbFaea90pzmR5gjrSp0Q4N_LDz9qMhu38z99wcW0utqZNWIsZ8vmHl8yo2t7AvV72yR30HH8o",
+    "description": "Clean-lined elementary vase with subtle texture variations. A statement piece for any shelf or table.",
+    "artist": "Gyara Gyara Studio",
+    "featured": true,
+    "specs": {
+      "material": "Wood",
+      "length": "11 in",
+      "color": "Light Brown",
+      "width": "9 in",
+      "texture": "Smooth Wooden",
+      "height": "16 in"
+    },
+    "inventory": 6
+  },
+  {
+    "id": 4,
+    "name": "Ethera Vase - E",
+    "slug": "ethera-vase-e",
+    "category": "elementary",
+    "price": 10,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWx5OB1H0UKl8OarnsUrvofnRZljq28_a1PBUoxRJzGJIMkhH6tLE0TK0Kaj4aYMfw7w4lNhdEjqyhDyyCDANv8_XUhOiZN-mMQvlDvDJGBo6Py_01KpXqp0VakZs2wBdh8dNcgPL93rGfsvTiUzOO6C52agpdityMTCPgg66qfK2VNNX0JXKvwC7d2_Yk59yhdcpHvjVFSpucmkUzvH3rIp-Zlvt6xr9XXPTJmrwZkJVY2T1fwHsFwKr3utoI17MiiRQpdzTqOLiC",
+    "description": "Beautifully proportioned vase with rich wood tones. Each piece reveals unique natural patterns in the grain.",
+    "artist": "Gyara Gyara Studio",
+    "featured": true,
+    "specs": {
+      "material": "Wood",
+      "length": "13 in",
+      "color": "Dark Brown",
+      "width": "8 in",
+      "texture": "Wooden",
+      "height": "18 in"
+    },
+    "inventory": 9
+  },
+  {
+    "id": 5,
+    "name": "Sandel Vase",
+    "slug": "sandel-vase",
+    "category": "japandi",
+    "price": 69.99,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAUftZIrL6wyDaeAu63mT1u-WUot-dB1AM7dSvmhqqrsGHypezc0Esq_I2M_XZPTEsNDg-w6bap4AWvyxwrCVFwLA0bE3DeIPcVJ69ys1fB-unf82oaPqmsZrz5eM0wdPCFuUHNsTnn6_2kBcjTgmOTsPnRxWinW15Jv8PvAL7nkJEUU1FJke6VBjpzjbeXIcdRgeB39IGcHJFU68KALp3Z2cNYtLyPTSZywj8nknFjLQ06AfQe4Dpmf5CSlGcTwSS41vfUUG7NmZi3",
+    "description": "A sculptural vase with a curvy, double gourd silhouette, showcasing a warm natural grain. The concentric ring enhances its organic charm.",
+    "artist": "Gyara Gyara Studio",
+    "featured": true,
+    "detailImages": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCNUAWd274eAi_TbpuXohdphEvvsS1NvTuzpu2EMwW2wr4mfsKeS8df93D28LDnKWXOXHkPob3ywTkQWGfaPO365slfOT_bE3qwUatGOp_h5ZylR4OQ9zlFTjfqPGxHjIdbrVSz0vafmLVfVPVwyypitqvEoJNyLEYA9AL8mCS4ECDlp-a-qI8vWcenY86ZimMBrMRoipflspMu2nAC3uWuzh3Zt1pmM-qi1cFLf98gu32EQxWjhcIWXF9tzRUOF0KRvLQlizyORgJj",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDmZH23fESftC2A3khyBYpx6_YARem1vlGhVmZzVrhQYpb1kzkzPdlhH21iFpLRHT9bAcC66bYy5i5FrkUv5PiRwq5iV4UZ02SZeRqsM5m3oUdjaQRwNeNMqCC-lf62KICItBGszA3bOFbxWzZHFX3wiPiH3o0Kx2IUyWppgAjY4JJ2ePDwm4gnjZwwuVjvUYpJ4U8IMQtwQeGKLJ3Wm7p8r7GrQv5zYWZMNZMoFKQrwne6s6Q8mf8oRzOSMSNCo-_jlWS9xdBr9yCT"
+    ],
+    "specs": {
+      "material": "Wood",
+      "length": "15 in",
+      "color": "Brown",
+      "width": "20 in",
+      "texture": "Wooden",
+      "height": "20 in"
+    },
+    "inventory": 11
+  },
+  {
+    "id": 6,
+    "name": "Wooden Vase with Flowers",
+    "slug": "wooden-vase-flowers",
+    "category": "japandi",
+    "price": 15,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqkUIhL3DNzojihRZ_5vhPBu4skUuwDcWrctQIVIM0psD0uruHBF8eaARFFYdC6DZYdMiyfCEQiACEf1lyYtvd8Lbx6kUikINKOil0F85whZNEvhDdFzM21aYEK0Ta3Wrq2M9dsHWY1b0ePYrP4wi4isIB_cjcg_mGoIep6lF2xypq4qC-CBUJiV6brwqe1fKiTPwozRR22rzQ-VrtxJVx6s8QESca-ZmDd0nbrKjHJvtmAiEtipN6xuP-YIlouz9qqQmIX6vW_D8i",
+    "description": "Handcrafted wooden vase adorned with dried flowers. A perfect centerpiece combining natural beauty with artisan craftsmanship.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Wood",
+      "length": "10 in",
+      "color": "Natural",
+      "width": "10 in",
+      "texture": "Smooth Wooden",
+      "height": "14 in"
+    },
+    "inventory": 13
+  },
+  {
+    "id": 7,
+    "name": "Orange Bloom Vase",
+    "slug": "orange-bloom-vase",
+    "category": "elementary",
+    "price": 15,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCJiZqzbNN56WZ1NFm1tvxDlWCWVGQUX8IJuq0c9VsCa0aqnVyUG8DEgfr4f16aS__01SlGO0TPZeFcF8etJsLGSKBUzETBaiVM7mQhnr64aoSDN4NFUnHPBER3WJk0CTFV3BH9xncD6hK38aYbCvoNvEs0U_vKCXB2oYxut6XNoJEfpj8eUKDOHaHIRsTE2u-EXChziDgEud4qXMzo7g1QI0ufIFhn7ROz_MJl0jb7cCXM9FwH8Dd9Cz5kmADseElEsO-xIls8EfQh",
+    "description": "Stunning wooden vase paired with vibrant orange flowers. Brings warmth and organic elegance to any room.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Wood",
+      "length": "12 in",
+      "color": "Natural Brown",
+      "width": "9 in",
+      "texture": "Wooden",
+      "height": "16 in"
+    },
+    "inventory": 5
+  },
+  {
+    "id": 8,
+    "name": "Light Wood Vase",
+    "slug": "light-wood-vase",
+    "category": "japandi",
+    "price": 15,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAY3YbWy9QaRnY1IbrUvzO_Gsx0iLe6aDV09GfhZ2lJRIbMMObjHENB53glXCDcjS47xaeE8IIPh4z3xMxDT4Dh8wWKJn3hOFqP_KHlMovLLEmdOr17IlYdA4BuX7pbNDNfwdlGiogQcnkO_U8ypzs_dC0WXTlJuqk2imoikq6LF2nkY0PintEJkdME_jTBTYjSh8PCydMpafTycWem5Dc3NK7ZF5I3Y_G6h0UixxNThSG0q6MYp3YXv_R7iP2aDGcysgigp0QKFY_0",
+    "description": "Minimalist light wood vase with clean lines and a satin finish. The pale tone complements any decor style.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Light Wood",
+      "length": "10 in",
+      "color": "Pale Brown",
+      "width": "8 in",
+      "texture": "Satin Wooden",
+      "height": "13 in"
+    },
+    "inventory": 5
+  },
+  {
+    "id": 9,
+    "name": "Dark Wood Vase",
+    "slug": "dark-wood-vase",
+    "category": "elementary",
+    "price": 15,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA9AO77YMxd-jVGJQsMKeqThERRwlxmLfoJUjawrA62mLeaAarJSljJUM9kmXiz_0ilsoTbIJA1nAon0jzYnwg0OFJ151J0K5PmHS34vwEikUdqE9YuHKmHvH24nzO2NZVnB2LPww3EiX7OUTBeorqEvx5F3vS7t4iGB7o_GmptS6emsIqMpgaY0yWnWBllKqS-3JBOkIst1A9WpDfrCmuCEttDhi0WkJ8qxlqW6iZLv6m7_PJNgElwvsb0GvtoqZ3Kz8BeT4EbZl4p",
+    "description": "Rich dark wood vase with deep tones and visible grain. A bold accent piece for contemporary spaces.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Dark Wood",
+      "length": "11 in",
+      "color": "Dark Brown",
+      "width": "9 in",
+      "texture": "Polished Wooden",
+      "height": "15 in"
+    },
+    "inventory": 14
+  },
+  {
+    "id": 10,
+    "name": "Bamboo Vase",
+    "slug": "bamboo-vase",
+    "category": "sets",
+    "price": 50,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCawQhwoQp7mw9GbcxSUTRZGjYj3aPu-attAoue5UxY8SFWtO1LH-tXXpnx3R1uMYEYCSoAPgy_IHk6PdE6RV5U9kZN2BbYANWnP91tI6_xn8UiAfKJjwOmlzjfMTv72boAkm3Mp2eeMgiHNx2KbTqw16bsto8-UjRX-gHT5iCAuBAp89Guab_Y3xDu14Q-cbYOTt0sSGoXkZ4fbJSiDDcpILXRpIH3Y0srsRV4jdBGN549aFRuBAJ69tTrqUh5cvwqkhzor4Fk3omb",
+    "description": "Elegant bamboo-inspired vase with a refined silhouette. Part of our curated collection for mindful living.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Bamboo Wood",
+      "length": "14 in",
+      "color": "Natural Bamboo",
+      "width": "12 in",
+      "texture": "Smooth",
+      "height": "18 in"
+    },
+    "inventory": 11
+  },
+  {
+    "id": 11,
+    "name": "Abstract Art Print",
+    "slug": "abstract-art-print",
+    "category": "canvas",
+    "price": 5000,
+    "currency": "₹",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCnXhwQUTd1uj0C0eEXUR6hGJr9-l8lWCPrKNxsuHl1-gcTrGkcB-_F7ezj1c6UnhCCum60E0Nzy8uBK3ia48UhX7S4WDMpKwsXSVYk6qVJD82Js86dpFNax7SVYhiLSf8R2VS90zgU7vdyI8-5UfL_l8_s5C7mmCrR0E8tyeM6fFQ2W5MqxX8n1r6wa6LfydswFADfgjz6Zg9R1nmUh2b2SXc5-qfM4u2V6hrwzn0eR9T-jnyVX28Z2NbeFSiuvBweSnS_gS6A-XsJ",
+    "description": "A sculptural vase with a curvy, double gourd silhouette, showcasing a warm natural grain. The concentric ring enhances its organic charm.",
+    "artist": "@Artist name",
+    "featured": true,
+    "isArtwork": true,
+    "options": {
+      "paperMaterial": [
+        "wood",
+        "cotton",
+        "linen"
+      ],
+      "frame": [
+        "black",
+        "natural oak",
+        "walnut",
+        "unframed"
+      ],
+      "paperSize": [
+        "18 inch",
+        "22 inch",
+        "24 inch"
+      ],
+      "canvasType": [
+        "Stretched canvas",
+        "Rolled canvas"
+      ]
+    },
+    "inventory": 7
+  },
+  {
+    "id": 12,
+    "name": "Ceramic Duo Set",
+    "slug": "ceramic-duo-set",
+    "category": "sets",
+    "price": 25,
+    "currency": "$",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD527Z_6EqSVHMYIYgJpbjq8-3Mb9dbLyuoklIGoGykaNdGZmlebGXiMVHsmXB0nf4UuHMVSasnzOYx7eCJj-6UwJnZBL3G7qptcIkL3AdcUkjVZ9fLVY25T9ndm-KmpJN75Ubeugpn6pACD1_KN3T7v_6rCb-iI62JLTXSZc1IG7BDjjx1PdEiP-8gJZqQX7adAynVb57yWQEl-iWliMcG7SrML5UWmqe5rJGCiGpI5wjC7wmJMjX-oaRezpbu-nfiyu2HncHl2nfo",
+    "description": "A beautifully paired set of wooden vases designed to complement each other. Ideal for creating balanced arrangements.",
+    "artist": "Gyara Gyara Studio",
+    "featured": false,
+    "specs": {
+      "material": "Wood",
+      "length": "10 in",
+      "color": "Mixed Brown",
+      "width": "8 in",
+      "texture": "Smooth",
+      "height": "12 in"
+    },
+    "inventory": 7
+  }
+]
