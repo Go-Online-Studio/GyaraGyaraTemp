@@ -183,7 +183,7 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
       <!-- Left: Product Image & Short Description -->
       <div class="space-y-12">
-        <div class="aspect-square bg-surface rounded overflow-hidden gg-img-zoom">
+        <div class="aspect-square rounded overflow-hidden gg-img-zoom">
           <img alt="Sandel Vase" class="w-[75%] m-auto object-cover relative top-1/2 -translate-y-1/2" id="product-image"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUftZIrL6wyDaeAu63mT1u-WUot-dB1AM7dSvmhqqrsGHypezc0Esq_I2M_XZPTEsNDg-w6bap4AWvyxwrCVFwLA0bE3DeIPcVJ69ys1fB-unf82oaPqmsZrz5eM0wdPCFuUHNsTnn6_2kBcjTgmOTsPnRxWinW15Jv8PvAL7nkJEUU1FJke6VBjpzjbeXIcdRgeB39IGcHJFU68KALp3Z2cNYtLyPTSZywj8nknFjLQ06AfQe4Dpmf5CSlGcTwSS41vfUUG7NmZi3"
             fetchpriority="high" width="600" height="600" />
@@ -242,7 +242,7 @@
 </div>
 
         <!-- Action Buttons -->
-<div class="space-y-4 max-w-xl mt-16">
+<div class="space-y-4 max-w-xl mt-16 mx-auto w-full">
   <!-- Add to Cart Row -->
   <div class="flex items-stretch border border-black rounded-xl overflow-hidden bg-[#FFF9F2]" data-qty-group="cart">
     <button
@@ -289,43 +289,41 @@
         About the product
     </h2>
 
-    <div class="relative">
-
-        <!-- Vase Line Art (Desktop Only) -->
-        <div class="hidden lg:block absolute top-0 right-8 z-10">   
-            <img alt="Vase Line Art" class="w-2/3" src="images/categoryGraphics1.svg" loading="lazy" width="400" height="400">
-        </div>
+    <div class="relative flex">
 
         <!-- Main Image -->
-        <div class="relative lg:w-[72%]">
+        <div class="relative w-full sm:w-[80%] mx-auto lg:w-[72%] z-10" style="isolation: isolate;">
             <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUAWd274eAi_TbpuXohdphEvvsS1NvTuzpu2EMwW2wr4mfsKeS8df93D28LDnKWXOXHkPob3ywTkQWGfaPO365slfOT_bE3qwUatGOp_h5ZylR4OQ9zlFTjfqPGxHjIdbrVSz0vafmLVfVPVwyypitqvEoJNyLEYA9AL8mCS4ECDlp-a-qI8vWcenY86ZimMBrMRoipflspMu2nAC3uWuzh3Zt1pmM-qi1cFLf98gu32EQxWjhcIWXF9tzRUOF0KRvLQlizyORgJj"
                 alt="Wood Vase"
-                class="w-full object-cover"
+                class="w-full object-cover -z-10 relative"
             >
 
             <!-- Mobile Text Card -->
-            <div class="lg:hidden absolute left-0 top-[34%] w-[64%] bg-[#efebe7]/90 p-6">
-                <p class="text-[18px] leading-[1.5] tracking-wide">
+            <div class="lg:hidden absolute left-0 bottom-0 w-[64%] bg-[#d9d9d9b3] p-6 !pb-20">
+                <p class="text-sm sm:text-[18px] leading-[1.5] tracking-wide">
                     Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
                 </p>
             </div>
 
             <!-- Texture Label -->
-            <div class="absolute bottom-0 right-0 lg:right-[-18%] bg-black/45 backdrop-blur-sm px-8 py-5 lg:px-14 lg:py-8">
-                <h3 class="text-white text-2xl lg:text-4xl tracking-wide">
+            <div class="absolute bottom-0 right-0 lg:translate-x-[20%] bg-black/45 backdrop-blur-sm px-8 py-5 lg:px-14 lg:py-8 z-20">
+                <h3 class="text-white text-3xl lg:text-5xl tracking-wide">
                     Tactile Texture
                 </h3>
             </div>
+
+            <p class="hidden lg:block absolute right-0 translate-x-[90%] bottom-0 w-[64%] leading-[1.6] tracking-wide max-w-sm bg-[#d9d9d9b3] pt-16 px-12 pb-28 text-xl xl:text-2xl">
+              Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
+            </p>
         </div>
 
         <!-- Desktop Text Card -->
-        <div
-            class="hidden lg:block absolute right-0 bottom-0 w-[40%] bg-[#efebe7]/90 p-12 z-20"
-        >
-            <p class="text-[20px] leading-[1.6] tracking-wide max-w-sm">
-                Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
-            </p>
+        <div class="hidden lg:flex flex-col justify-between" > 
+          <!-- Vase Line Art (Desktop Only) -->
+          <div class="hidden lg:block relative z-10">   
+              <img alt="Vase Line Art" class="w-2/3 w-[80%] -mt-[20%]" src="images/categoryGraphics1.svg" loading="lazy" width="500" height="500">
+          </div>
         </div>
 
     </div>
