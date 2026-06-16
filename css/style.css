@@ -7,6 +7,7 @@
 :root {
   --gg-primary: #1a2a40;
   --gg-surface: #FFF7EA;
+  --gg-cardBack: #F4E6D1;
   --gg-surface-dim: #dbd9db;
   --gg-on-surface: #1a1c1e;
   --gg-outline: #73777f;
@@ -181,6 +182,16 @@ h3{
   transform: translateY(0) scale(1);
 }
 
+.mainImgPopBack{
+ position: absolute;
+ container-type: inline-size;
+ height: 100%;
+ width: 100%;
+background-color: var(--gg-primary);
+z-index: -1;
+left: -23%; 
+}
+
 
 
 /* --- Navbar Transitions (Homepage transparent → solid) --- */
@@ -232,8 +243,12 @@ h3{
   transition: transform 0.5s ease;
 }
 .gg-img-zoom:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-50%);
 }
+
+/* .descriptionPage .gg-img-zoom:hover img {
+  transform: scale(1.05) translateY(-50%);
+} */
 
 /* --- Form Validation --- */
 .gg-field-error {
@@ -357,3 +372,80 @@ h3{
 }
 
 
+
+
+.product-stage{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    height:100%;
+}
+
+/* Stage */
+.stage-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center bottom;
+}
+
+/* Ground Shadow */
+.vase-shadow{
+    position:absolute;
+    bottom:22%;
+    left:50%;
+    transform:translateX(-50%);
+    width:28%;
+    height:24px;
+    border-radius:999px;
+    background:rgba(0,0,0,.28);
+    filter:blur(6px);
+    transition:all .6s ease;
+    z-index:1;
+}
+
+/* Vase */
+.vase-img{
+    position:relative;
+    z-index:2;
+    width:72%;
+    height:auto;
+    object-fit:contain;
+    transition:all .6s cubic-bezier(.22,1,.36,1);
+    filter:drop-shadow(0 15px 25px rgba(0,0,0,.15));
+}
+
+/* Hover */
+.product-card:hover .vase-img{
+    animation:vaseFloat 3s ease-in-out infinite;
+}
+
+.product-card:hover .vase-shadow{
+    animation:shadowFloat 3s ease-in-out infinite;
+}
+
+/* Vase moves up */
+@keyframes vaseFloat{
+    0%,100%{
+        transform:translateY(-12px) scale(1.04);
+    }
+    50%{
+        transform:translateY(-28px) scale(1.08);
+    }
+}
+
+/* Shadow shrinks when vase rises */
+@keyframes shadowFloat{
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+        opacity:.28;
+    }
+    50%{
+        transform:translateX(-50%) scale(.72);
+        opacity:.14;
+    }
+}

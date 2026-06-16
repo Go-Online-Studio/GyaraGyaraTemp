@@ -329,45 +329,47 @@
     overlay.id = 'newsletterOverlay';
 
     overlay.innerHTML = `
-      <div class="gg-popup-content relative w-full max-w-[500px] bg-white rounded-lg h-screen overflow-y-auto custom-scroll shadow-2xl pb-8">
+      <div class="gg-popup-content relative w-full max-w-[500px] bg-white rounded-lg max-h-screen overflow-y-auto custom-scroll shadow-2xl pb-8">
         <button aria-label="Close popup" class="absolute top-4 right-4 z-50 text-gray-500 hover:text-black transition-colors" id="popupCloseBtn">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-        <div class="relative w-full pt-8 px-3 md:px-8">
-          <div class="relative shadow-gray-900/45 z-10 w-full h-full shadow-md bg-white flex items-center justify-center mt-16 pb-8 border-2 border-gray-900">
-            <div class="w-[80%] ml-4 lg:ml-8 -mt-8">
-              <img  
-                alt="Plant in a decorative wooden vase" 
-                class="filter drop-shadow-[0_12px_12px_rgba(37,33,28,0.40)] object-cover aspect-square object-center" 
-                src="images/PopUp.webp"
-                loading="lazy"
-              />
+        <div class="relative w-full pt-8 px-3 md:px-8 overflow-hidden">
+          <div class="p-4 !pb-0">
+          <div class="relative shadow-gray-900/45 z-10 w-full h-full shadow-md bg-white flex items-center justify-center mt-16 pb-4 lg:pb-8 border-2 border-gray-900">
+            <div class="w-[80%] ml-4 lg:ml-8 -mt-8 relative">
+              <img alt="Plant in a decorative wooden vase" class="filter drop-shadow-[0_12px_12px_rgba(37,33,28,0.40)] object-cover aspect-square object-center" src="images/PopUp.webp" loading="lazy" />
+              <div class="mainImgPopBack flex -top-[30px] lg:-top[40px]">
+                <span class="[writing-mode:vertical-rl] rotate-180 text-[10cqw] text-[#F4E6D1] display-inline-block pr-[4cqw] pt-[4cqw] leading-none">
+                  Welcome...
+                </span>
+              </div>
             </div>
-
           </div>
-        </div>
-        <div class="px-3 md:px-8 mt-6">
-          <form class="space-y-3" id="newsletterForm" novalidate>
-            <div class="relative flex items-center border border-black rounded shadow-sm overflow-hidden bg-white h-10">
-              <label class="shrink-0 pl-1 md:pl-4 pr-1 md:pr-3 py-2 text-sm font-medium text-black min-w-[70px] font-serif" for="nl-email">Email</label>
-              <div class="h-5 w-px bg-gray-300"></div>
-              <input class="flex-1 px-3 py-2 border-none focus:ring-0 text-sm outline-none" id="nl-email" type="email" required/>
-            </div>
-            <div class="relative flex items-center border border-black rounded shadow-sm overflow-hidden bg-white h-10">
-              <label class="shrink-0 pl-1 md:pl-4 pr-1 md:pr-3 py-2 text-sm font-medium text-black min-w-[78px] font-serif" for="nl-phone">Phone no.</label>
-              <div class="h-5 w-px bg-gray-300"></div>
-              <input class="flex-1 px-3 py-2 border-none focus:ring-0 text-sm outline-none" id="nl-phone" type="tel"/>
-            </div>
-            <div class="pt-3 flex justify-center">
-              <button class="bg-[#c4c4c4] border border-black text-black px-12 py-2 rounded text-sm font-medium shadow hover:bg-gray-300 transition-colors w-[200px]" type="submit">Register</button>
-            </div>
-          </form>
-        </div>
-        <div class="mx-8 mt-6 bg-[#f2e8d5] border border-[#f2e8d5] shadow-md text-center py-5 px-4">
-          <h3 class="text-2xl text-[#1a2942] mb-2 tracking-wide font-serif" style="font-weight:600;">10% OFF</h3>
-          <p class="text-[#1a2942] text-sm leading-relaxed max-w-[250px] mx-auto font-serif">Register and get upto 10% off on your Purchase</p>
+          
+          </div>
+          <div class="px-3 md:px-8 mt-6">
+            <form class="space-y-3" id="newsletterForm" novalidate>
+              <div class="relative flex items-center border border-black rounded shadow-sm overflow-hidden bg-white h-10">
+                <label class="shrink-0 pl-1 md:pl-4 pr-1 md:pr-3 py-2 text-sm font-medium text-black min-w-[70px] font-serif" for="nl-email">Email</label>
+                <div class="h-5 w-px bg-gray-300"></div>
+                <input class="flex-1 px-3 py-2 border-none focus:ring-0 text-sm outline-none" id="nl-email" type="email" required />
+              </div>
+              <div class="relative flex items-center border border-black rounded shadow-sm overflow-hidden bg-white h-10">
+                <label class="shrink-0 pl-1 md:pl-4 pr-1 md:pr-3 py-2 text-sm font-medium text-black min-w-[78px] font-serif" for="nl-phone">Phone no.</label>
+                <div class="h-5 w-px bg-gray-300"></div>
+                <input class="flex-1 px-3 py-2 border-none focus:ring-0 text-sm outline-none" id="nl-phone" type="tel" />
+              </div>
+              <div class="lg:pt-3 flex justify-center">
+                <button class="bg-[#c4c4c4] border border-black text-black px-12 py-2 rounded text-sm font-medium shadow hover:bg-gray-300 transition-colors w-[200px]" type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+          <div class="mx-3 mt-3 lg:mx-8 lg:mt-6 bg-[#f2e8d5] border border-[#f2e8d5] shadow-md text-center py-3 lg:py-5 px-3 lg:px-4">
+            <h3 class="text-2xl text-[#1a2942] mb-2 tracking-wide font-serif" style="font-weight:600;">10% OFF</h3>
+            <p class="text-[#1a2942] text-sm leading-relaxed max-w-[250px] mx-auto font-serif">Register and get upto 10% off on your Purchase</p>
+          </div>
         </div>
       </div>
     `;

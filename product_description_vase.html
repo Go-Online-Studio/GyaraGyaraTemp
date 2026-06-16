@@ -178,119 +178,159 @@
     </div>
   </header>
 
-  <main id="page-content" class="flex-grow">
+  <main id="page-content" class="flex-grow descriptionPage">
     <!-- BEGIN: Product Overview Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
       <!-- Left: Product Image & Short Description -->
       <div class="space-y-12">
         <div class="aspect-square bg-surface rounded overflow-hidden gg-img-zoom">
-          <img alt="Sandel Vase" class="w-full h-full object-cover" id="product-image"
+          <img alt="Sandel Vase" class="w-[75%] m-auto object-cover relative top-1/2 -translate-y-1/2" id="product-image"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUftZIrL6wyDaeAu63mT1u-WUot-dB1AM7dSvmhqqrsGHypezc0Esq_I2M_XZPTEsNDg-w6bap4AWvyxwrCVFwLA0bE3DeIPcVJ69ys1fB-unf82oaPqmsZrz5eM0wdPCFuUHNsTnn6_2kBcjTgmOTsPnRxWinW15Jv8PvAL7nkJEUU1FJke6VBjpzjbeXIcdRgeB39IGcHJFU68KALp3Z2cNYtLyPTSZywj8nknFjLQ06AfQe4Dpmf5CSlGcTwSS41vfUUG7NmZi3"
             fetchpriority="high" width="600" height="600" />
         </div>
         <div class="max-w-md">
           <h2 class="text-2xl font-semibold mb-4">Description</h2>
-          <p class="text-lg leading-relaxed text-textMuted" id="product-description">
+          <p class="text-2xl leading-relaxed" id="product-description">
             A sculptural vase with a curvy, double gourd silhouette, showcasing a warm natural grain. The concentric
             ring enhances its organic charm.
           </p>
-          <hr class="mt-8 border-border" />
+          <hr class="mt-8 border-1 border-gray-700" />
         </div>
       </div>
       <!-- Right: Product Details & Actions -->
       <div class="flex flex-col pt-8 lg:pt-0">
-        <h1 class="text-5xl font-bold mb-4 tracking-tight" id="product-name">Sandel Vase</h1>
-        <p class="text-3xl font-semibold mb-12" id="product-price">$69.99</p>
+        <h1 class="text-4xl md:text-5xl mb-4 font-bodyPoppins" id="product-name">Sandel Vase</h1>
+        <p class="text-4xl lg:text-5xl font-semibold mb-12 font-bodyPoppins" id="product-price">$69.99</p>
         <!-- Specifications Grid -->
-        <div class="border-t border-b border-border py-8 mb-12">
-          <div class="grid grid-cols-2 gap-x-8 gap-y-6">
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Material:</span>
-              <span class="font-medium" data-spec="material">Wood</span>
-            </div>
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Length:</span>
-              <span class="font-medium" data-spec="length">15 in</span>
-            </div>
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Color:</span>
-              <span class="font-medium" data-spec="color">Brown</span>
-            </div>
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Width:</span>
-              <span class="font-medium" data-spec="width">20 in</span>
-            </div>
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Texture:</span>
-              <span class="font-medium" data-spec="texture">Wooden</span>
-            </div>
-            <div class="flex justify-between border-b border-gray-100 pb-2">
-              <span class="text-textMuted">Height:</span>
-              <span class="font-medium" data-spec="height">20 in</span>
-            </div>
-          </div>
-        </div>
+        <div class="border-t border-b border-black py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-x-12 position-relative">
+    
+    <!-- Left Column: Attributes -->
+    <div class="space-y-6">
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Material:</span>
+        <span class="font-medium text-black font-bodyPoppins" data-spec="material">wood</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Color:</span>
+        <span class="font-medium text-black font-bodyPoppins" data-spec="color">Brown</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Texture:</span>
+        <span class="font-medium text-black font-bodyPoppins" data-spec="texture">Wooden</span>
+      </div>
+    </div>
+
+    <!-- Right Column: Dimensions -->
+    <div class="space-y-6 sm:
+    pl-3 lg:pl-12 sm:border-l sm:border-gray-300">
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Length:</span>
+        <span class="font-medium text-black w-16 font-bodyPoppins" data-spec="length">15 in</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Width:</span>
+        <span class="font-medium text-black w-16 font-bodyPoppins" data-spec="width">20 in</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Height:</span>
+        <span class="font-medium text-black w-16 font-bodyPoppins" data-spec="height">20 in</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         <!-- Action Buttons -->
-        <div class="space-y-4">
-          <!-- Add to Cart Row -->
-          <div class="flex space-x-4" data-qty-group="cart">
-            <button
-              class="flex-grow flex items-center justify-center border border-textMain py-3 px-6 hover:bg-gray-50 transition-colors"
-              data-action="add-to-cart">
-              <span class="font-medium uppercase tracking-wider text-sm">Add to Cart</span>
-            </button>
-            <div class="flex items-center border border-textMain">
-              <button class="px-4 py-3 hover:bg-gray-50" data-action="qty-minus"
-                aria-label="Decrease quantity">-</button>
-              <span class="px-4 py-3 font-medium" data-action="qty-display">1</span>
-              <button class="px-4 py-3 hover:bg-gray-50" data-action="qty-plus"
-                aria-label="Increase quantity">+</button>
-            </div>
-          </div>
-          <!-- Buy Now Row -->
-          <div class="flex space-x-4" data-qty-group="buy">
-            <button
-              class="flex-grow flex items-center justify-center border border-textMain py-3 px-6 hover:bg-gray-50 transition-colors"
-              data-action="buy-now">
-              <span class="font-medium uppercase tracking-wider text-sm">Buy Now</span>
-            </button>
-            <div class="flex items-center border border-textMain">
-              <button class="px-4 py-3 hover:bg-gray-50" data-action="qty-minus"
-                aria-label="Decrease quantity">-</button>
-              <span class="px-4 py-3 font-medium" data-action="qty-display">1</span>
-              <button class="px-4 py-3 hover:bg-gray-50" data-action="qty-plus"
-                aria-label="Increase quantity">+</button>
-            </div>
-          </div>
-        </div>
+<div class="space-y-4 max-w-xl mt-16">
+  <!-- Add to Cart Row -->
+  <div class="flex items-stretch border border-black rounded-xl overflow-hidden bg-[#FFF9F2]" data-qty-group="cart">
+    <button
+      class="flex-grow flex items-center justify-center space-x-3 py-3 px-6 hover:bg-[--gg-cardBack] transition-colors"
+      data-action="add-to-cart">
+      <!-- Heart Icon -->
+      <svg class="shrink-0 w-6 h-6" xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+      </svg>
+      <span class="grow font-normal text-base text-black">Add to Cart</span>
+    </button>
+    <div class="flex items-center border border-black rounded-xl -my-[1px] -mr-[1px] overflow-hidden">
+      <button class="px-4 py-3 hover:bg-[--gg-cardBack] text-black" data-action="qty-minus" aria-label="Decrease quantity">-</button>
+      <span class="px-2 py-3 font-normal text-black border-l border-r border-gray-200 min-w-[2.5rem] text-center" data-action="qty-display">1</span>
+      <button class="px-4 py-3 hover:bg-[--gg-cardBack] text-black" data-action="qty-plus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>
+
+  <!-- Buy Now Row -->
+  <div class="flex items-stretch border border-black rounded-xl overflow-hidden bg-[#FFF9F2]" data-qty-group="buy">
+    <button
+      class="flex-grow flex items-center justify-center space-x-3 py-3 px-6 hover:bg-[--gg-cardBack] transition-colors"
+      data-action="buy-now">
+      <!-- Discount Badge Icon -->
+      <svg class="shrink-0 w-6 h-6" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512.003 512.003" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M477.958 262.633a15.004 15.004 0 0 1 0-13.263l19.096-39.065c10.632-21.751 2.208-47.676-19.178-59.023l-38.41-20.38a15.005 15.005 0 0 1-7.796-10.729l-7.512-42.829c-4.183-23.846-26.241-39.87-50.208-36.479l-43.053 6.09a15.004 15.004 0 0 1-12.613-4.099l-31.251-30.232c-17.401-16.834-44.661-16.835-62.061 0L193.72 42.859a15.01 15.01 0 0 1-12.613 4.099l-43.053-6.09c-23.975-3.393-46.025 12.633-50.208 36.479l-7.512 42.827a15.008 15.008 0 0 1-7.795 10.73l-38.41 20.38c-21.386 11.346-29.81 37.273-19.178 59.024l19.095 39.064a15.004 15.004 0 0 1 0 13.263L14.95 301.699c-10.632 21.751-2.208 47.676 19.178 59.023l38.41 20.38a15.005 15.005 0 0 1 7.796 10.729l7.512 42.829c3.808 21.708 22.422 36.932 43.815 36.93 2.107 0 4.245-.148 6.394-.452l43.053-6.09a15 15 0 0 1 12.613 4.099l31.251 30.232c8.702 8.418 19.864 12.626 31.03 12.625 11.163-.001 22.332-4.209 31.03-12.625l31.252-30.232c3.372-3.261 7.968-4.751 12.613-4.099l43.053 6.09c23.978 3.392 46.025-12.633 50.208-36.479l7.513-42.827a15.008 15.008 0 0 1 7.795-10.73l38.41-20.38c21.386-11.346 29.81-37.273 19.178-59.024l-19.096-39.065zm-13.923 72.002-38.41 20.38c-12.246 6.499-20.645 18.057-23.04 31.713l-7.512 42.828a15.038 15.038 0 0 1-16.987 12.342l-43.053-6.09c-13.73-1.945-27.316 2.474-37.281 12.113L266.5 478.152a15.04 15.04 0 0 1-20.997 0l-31.251-30.232c-8.422-8.147-19.432-12.562-30.926-12.562-2.106 0-4.229.148-6.355.449l-43.053 6.09a15.042 15.042 0 0 1-16.987-12.342l-7.513-42.829c-2.396-13.656-10.794-25.215-23.041-31.712l-38.41-20.38a15.037 15.037 0 0 1-6.489-19.969L60.574 275.6c6.088-12.456 6.088-26.742 0-39.198l-19.096-39.065a15.037 15.037 0 0 1 6.489-19.969l38.41-20.38c12.246-6.499 20.645-18.057 23.04-31.713l7.512-42.828a15.038 15.038 0 0 1 16.987-12.342l43.053 6.09c13.725 1.943 27.316-2.474 37.281-12.113l31.252-30.232a15.04 15.04 0 0 1 20.997 0l31.251 30.232c9.965 9.64 23.554 14.056 37.281 12.113l43.053-6.09a15.04 15.04 0 0 1 16.987 12.342l7.512 42.829c2.396 13.656 10.794 25.215 23.041 31.712l38.41 20.38a15.037 15.037 0 0 1 6.489 19.969l-19.096 39.064c-6.088 12.455-6.088 26.743 0 39.198l19.096 39.064a15.039 15.039 0 0 1-6.488 19.972z" fill="currentColor" opacity="1" data-original="#000000" class=""></path><path d="M363.886 148.116c-5.765-5.766-15.115-5.766-20.881 0l-194.889 194.89c-5.766 5.766-5.766 15.115 0 20.881a14.72 14.72 0 0 0 10.44 4.325c3.778 0 7.558-1.441 10.44-4.325l194.889-194.889c5.768-5.767 5.768-15.115.001-20.882zM196.941 123.116c-29.852 0-54.139 24.287-54.139 54.139s24.287 54.139 54.139 54.139 54.139-24.287 54.139-54.139-24.287-54.139-54.139-54.139zm0 78.747c-13.569 0-24.608-11.039-24.608-24.609 0-13.569 11.039-24.608 24.608-24.608s24.609 11.039 24.609 24.608c-.001 13.57-11.04 24.609-24.609 24.609zM315.061 280.61c-29.852 0-54.139 24.287-54.139 54.139s24.287 54.139 54.139 54.139c29.852 0 54.139-24.287 54.139-54.139s-24.287-54.139-54.139-54.139zm0 78.747c-13.569 0-24.609-11.039-24.609-24.608s11.039-24.608 24.609-24.608c13.569 0 24.608 11.039 24.608 24.608s-11.039 24.608-24.608 24.608z" fill="currentColor" opacity="1" data-original="#000000" class=""></path></g></svg>
+      <span class="grow font-normal text-base text-black">Buy Now</span>
+    </button>
+    <div class="flex items-center border border-black rounded-xl -my-[1px] -mr-[1px] overflow-hidden">
+      <button class="px-4 py-3 hover:bg-[--gg-cardBack] text-black" data-action="qty-minus" aria-label="Decrease quantity">-</button>
+      <span class="px-2 py-3 font-normal text-black border-l border-r border-gray-200 min-w-[2.5rem] text-center" data-action="qty-display">2</span>
+      <button class="px-4 py-3 hover:bg-[--gg-cardBack] text-black" data-action="qty-plus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
     <!-- END: Product Overview Section -->
     <!-- BEGIN: About The Product Section -->
     <section class="bg-background py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold mb-16 tracking-tight">About the product</h2>
-        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-8 relative z-10">
-            <img alt="Tactile Texture Detail" class="w-full h-auto object-cover rounded shadow-sm"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUAWd274eAi_TbpuXohdphEvvsS1NvTuzpu2EMwW2wr4mfsKeS8df93D28LDnKWXOXHkPob3ywTkQWGfaPO365slfOT_bE3qwUatGOp_h5ZylR4OQ9zlFTjfqPGxHjIdbrVSz0vafmLVfVPVwyypitqvEoJNyLEYA9AL8mCS4ECDlp-a-qI8vWcenY86ZimMBrMRoipflspMu2nAC3uWuzh3Zt1pmM-qi1cFLf98gu32EQxWjhcIWXF9tzRUOF0KRvLQlizyORgJj"
-              loading="lazy" width="800" height="500" />
-            <div class="absolute bottom-10 right-10 bg-black/40 backdrop-blur-sm p-6 text-white rounded">
-              <h3 class="text-2xl font-medium tracking-wide">Tactile Texture</h3>
-            </div>
-          </div>
-          <div class="lg:col-span-5 lg:col-start-8 lg:-ml-20 relative z-20 bg-gray-200 p-10 md:p-16 rounded shadow-lg">
-            <div class="absolute -top-32 right-10 opacity-70 hidden md:block">
-              <img alt="Vase Line Art" class="w-48"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4aqVNc27c7w4WG3lGNG1LxFVD_bW7_DOQm_MRiliu90PRb_mbsEqVBOC72853Nt8YPhdzIYzsNnr63Rt-2JZKM4QkBuOMRDe0jrOjE7216YgPxQT47NOeUnLpoVa8ptPh50L8ROHB-qMWuMnCakXm2S147O8Enm8VkxuVqG07tpYfxm06a6mFBON3f_9-e8Oa-lLduCN_GE8RxzD3caEmjfsmPoh4TzVksu_h2e0Abbd8CoKKaN_wwTXU6BpGUDBDaM-GjeuJx7A"
-                loading="lazy" width="192" height="256" />
-            </div>
-            <p class="text-xl md:text-2xl leading-relaxed font-medium">
-              Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
-            </p>
-          </div>
+    
+    <h2 class="text-4xl lg:text-5xl font-medium mb-10 lg:mb-14">
+        About the product
+    </h2>
+
+    <div class="relative">
+
+        <!-- Vase Line Art (Desktop Only) -->
+        <div class="hidden lg:block absolute top-0 right-8 z-10">   
+            <img alt="Vase Line Art" class="w-2/3" src="images/categoryGraphics1.svg" loading="lazy" width="400" height="400">
         </div>
-      </div>
+
+        <!-- Main Image -->
+        <div class="relative lg:w-[72%]">
+            <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUAWd274eAi_TbpuXohdphEvvsS1NvTuzpu2EMwW2wr4mfsKeS8df93D28LDnKWXOXHkPob3ywTkQWGfaPO365slfOT_bE3qwUatGOp_h5ZylR4OQ9zlFTjfqPGxHjIdbrVSz0vafmLVfVPVwyypitqvEoJNyLEYA9AL8mCS4ECDlp-a-qI8vWcenY86ZimMBrMRoipflspMu2nAC3uWuzh3Zt1pmM-qi1cFLf98gu32EQxWjhcIWXF9tzRUOF0KRvLQlizyORgJj"
+                alt="Wood Vase"
+                class="w-full object-cover"
+            >
+
+            <!-- Mobile Text Card -->
+            <div class="lg:hidden absolute left-0 top-[34%] w-[64%] bg-[#efebe7]/90 p-6">
+                <p class="text-[18px] leading-[1.5] tracking-wide">
+                    Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
+                </p>
+            </div>
+
+            <!-- Texture Label -->
+            <div class="absolute bottom-0 right-0 lg:right-[-18%] bg-black/45 backdrop-blur-sm px-8 py-5 lg:px-14 lg:py-8">
+                <h3 class="text-white text-2xl lg:text-4xl tracking-wide">
+                    Tactile Texture
+                </h3>
+            </div>
+        </div>
+
+        <!-- Desktop Text Card -->
+        <div
+            class="hidden lg:block absolute right-0 bottom-0 w-[40%] bg-[#efebe7]/90 p-12 z-20"
+        >
+            <p class="text-[20px] leading-[1.6] tracking-wide max-w-sm">
+                Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
+            </p>
+        </div>
+
+    </div>
+
+  </div>
     </section>
     <!-- END: About The Product Section -->
     <!-- BEGIN: Breathing Space Section -->

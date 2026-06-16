@@ -258,7 +258,7 @@
       </div>
     </aside>
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col">
+    <div class="flex-1 flex flex-col max-w-full">
 
       <main id="page-content" class="flex-1 p-6 md:p-10 lg:p-12 max-w-4xl w-full">
         <!-- Page Header -->
@@ -276,11 +276,13 @@
           </div>
         </div>
         <!-- Mobile Nav Links -->
-        <div class="flex lg:hidden overflow-x-auto space-x-4 mb-6 pb-2 border-b border-gray-200">
+        <div class="max-w-full">
+          <div class="flex lg:hidden overflow-x-auto space-x-4 mb-6 pb-2 border-b border-gray-200">
           <button class="text-sm font-medium border-b-2 border-brand pb-2 px-2" data-tab-btn="profile">Profile</button>
           <button class="text-sm text-gray-500 pb-2 px-2" data-tab-btn="orders">Orders</button>
           <a href="wishlist.html" class="text-sm text-gray-500 pb-2 px-2 whitespace-nowrap">Saved Items</a>
           <button class="text-sm text-gray-500 pb-2 px-2 whitespace-nowrap" data-tab-btn="addresses">Addresses</button>
+        </div>
         </div>
 
         <!-- Profile Tab -->

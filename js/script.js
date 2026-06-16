@@ -76,7 +76,7 @@
     return `
       <div class="swiper-slide bg-[#F4E6D1] rounded-xl p-4 shadow-sm border border-[#c3c6cf]/30 gg-hover-lift">
         <div class="aspect-square bg-white rounded-lg mb-4 overflow-hidden relative gg-img-zoom">
-          <img alt="${product.name}" class="w-full h-full object-cover" src="${product.image}" loading="lazy" width="280" height="280"/>
+          <img alt="${product.name}" class="w-[75%] m-auto  relative top-1/2 -translate-y-1/2 object-cover" src="${product.image}" loading="lazy" width="280" height="280"/>
           <button class="absolute top-2 right-2 p-1 bg-white/50 rounded-full hover:bg-white transition-colors ${isWished ? "gg-heart-active" : ""}"
                   data-wishlist-btn="${product.id}" aria-label="${isWished ? "Remove from" : "Add to"} wishlist">
             <svg class="w-5 h-5 text-gray-700" fill="${isWished ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -233,35 +233,62 @@
     }
 
     grid.innerHTML = filtered.map((p) => createShopProductCard(p)).join("");
+
     bindCardEvents(grid);
-  }
+
+    if (typeof VanillaTilt !== "undefined") {
+      VanillaTilt.init(grid.querySelectorAll("[data-tilt]"), {
+        max: 15,
+        speed: 400,
+        glare: false,
+        "full-page-listening": false
+      });
+    } // <--- MISSING BRACKET 1 (Closes the 'if' statement)
+  } // <--- MISSING BRACKET 2 (Closes the 'renderShopProducts' function)
+
 
   function createShopProductCard(product) {
     const isWished = GG.isInWishlist(product.id);
+    // ... rest of your code stays exactly the same
     const detailPage = product.isArtwork
       ? "product_description_art_work.html"
       : "product_description_vase.html";
     return ` 
       <article class="product-card flex flex-col relative group">
-        <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-6 right-6 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
+  <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-6 right-6 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
           <svg class="w-5 h-5" fill="${isWished ? "currentColor" : "none"}" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
         </button>
-        <a href="${detailPage}?slug=${product.slug}" class="aspect-[4/5] !pb-0 p-2 lg:p-3 w-full bg-[#ebebed] overflow-hidden rounded-t-[7px]">
-          <img alt="${product.name}" class="w-full h-full object-cover object-center rounded-t-[7px] group-hover:scale-105 transition-transform duration-500" loading="lazy" src="${product.image}" width="300" height="375"/>
-        </a>
-        <div class="p-4 flex flex-col flex-grow">
-          <a href="${detailPage}?slug=${product.slug}" class="text-lg text-on-surface mb-1 hover:underline">${product.name}</a>
-          <p class="text-xl font-medium text-on-surface mb-4">${product.currency}${product.price}</p>
-          <div class="mt-auto flex items-center justify-between gap-2">
-            <button class="btn-outline flex-1 py-1.5 px-3 text-sm font-medium tracking-wide uppercase flex justify-center items-center" data-add-cart="${product.id}">Add To Cart</button>
-            <div class="btn-outline flex items-center h-full px-2 py-1.5">
-              <button class="px-2  hover:text-opacity-70" data-qty-minus="${product.id}">-</button>
-              <input class="w-6 text-center text-sm font-medium bg-transparent border-none p-0 focus:ring-0 " min="1" type="number" value="1" data-qty-input="${product.id}" aria-label="Quantity"/>
-              <button class="px-2  hover:text-opacity-70" data-qty-plus="${product.id}">+</button>
-            </div>
-          </div>
-        </div>
-      </article>`;
+  <a href="${detailPage}?slug=${product.slug}" class="product-stage !pb-0 p-2 lg:p-3 w-full rounded-t-[7px] [transform-style:preserve-3d]">
+
+    <!-- Vanilla-tilt attributes handle the mouse parallax -->
+  <div class="relative aspect-[0.78/1] max-w-[85%] cursor-pointer [transform-style:preserve-3d]" data-tilt="" data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+    <div class="relative w-full h-full flex justify-center items-center [transform-style:preserve-3d]">
+      
+      <!-- Fixed Stage/Podium Background -->
+      <img src="images/backProduct.webp" alt="Podium" class="absolute inset-0 w-full h-full object-contain object-bottom [transform:translateZ(-20px)]">
+
+      <!-- Floating Shadow -->
+      <span class="absolute bottom-[20%] left-1/2 w-[40%] h-[20px] rounded-full bg-black/60 blur-[8px] z-10 [transform:translateX(-50%)_translateZ(10px)] animate-shadow-float"></span>
+
+      <!-- Product Vase -->
+      <img src="${product.image}" alt="${product.name}" class="relative z-20 w-[68%] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)] animate-vase-float">
+      
+    </div>
+  </div>
+  </a>
+  <div class="p-4 flex flex-col flex-grow">
+    <a href="${detailPage}?slug=${product.slug}" class="text-lg text-on-surface mb-1 hover:underline">${product.name}</a>
+    <p class="text-xl font-medium text-on-surface mb-4">${product.currency}${product.price}</p>
+    <div class="mt-auto flex items-center justify-between gap-2">
+      <button class="btn-outline flex-1 py-1.5 px-3 text-sm font-medium tracking-wide uppercase flex justify-center items-center" data-add-cart="${product.id}">Add To Cart</button>
+      <div class="btn-outline flex items-center h-full px-2 py-1.5">
+        <button class="px-2  hover:text-opacity-70" data-qty-minus="${product.id}">-</button>
+        <input class="w-6 text-center text-sm font-medium bg-transparent border-none p-0 focus:ring-0 " min="1" type="number" value="1" data-qty-input="${product.id}" aria-label="Quantity">
+        <button class="px-2  hover:text-opacity-70" data-qty-plus="${product.id}">+</button>
+      </div>
+    </div>
+  </div>
+</article>`;
   }
 
   // ==========================================
@@ -441,12 +468,12 @@
           <img alt="${item.name}" class="w-full h-full object-cover" src="${item.image}" width="128" height="128" loading="lazy"/>
         </div>
         <div class="flex-grow">
-          <h3 class="text-lg font-medium">${item.name}</h3>
+          <h3 class="text-lg font-medium font-bodyPoppins">${item.name}</h3>
           <p class="font-bold text-lg mt-1">${item.currency}${item.price}</p>
           <div class="flex items-center space-x-4 mt-4">
-            <div class="flex border border-gray-300 rounded overflow-hidden w-24">
+            <div class="flex border border-gray-700 rounded overflow-hidden">
               <button class="px-3 py-1 hover:bg-gray-100 border-r border-gray-300 focus:outline-none" data-checkout-minus="${item.id}">-</button>
-              <input class="w-full text-center py-1 border-none focus:ring-0 text-sm" readonly type="text" value="${item.qty}" data-checkout-qty="${item.id}"/>
+              <input class="max-w-10 text-center py-1 border-none focus:ring-0 text-sm" readonly type="text" value="${item.qty}" data-checkout-qty="${item.id}"/>
               <button class="px-3 py-1 hover:bg-gray-100 border-l border-gray-300 focus:outline-none" data-checkout-plus="${item.id}">+</button>
             </div>
             <button aria-label="Remove item" class="text-gray-500 hover:text-red-500 transition-colors focus:outline-none" data-checkout-remove="${item.id}">
@@ -636,6 +663,7 @@
     }
   }
 
+
   // ==========================================
   // WISHLIST — DYNAMIC RENDERING
   // ==========================================
@@ -653,7 +681,18 @@
     container.innerHTML = wishlist
       .map((p) => createShopProductCard(p))
       .join("");
+    
     bindCardEvents(container);
+
+    // Initialize Vanilla-Tilt on the newly generated wishlist cards
+    if (typeof VanillaTilt !== "undefined") {
+      VanillaTilt.init(container.querySelectorAll("[data-tilt]"), {
+        max: 15,
+        speed: 400,
+        glare: false,
+        "full-page-listening": false
+      });
+    }
   }
 
   // ==========================================

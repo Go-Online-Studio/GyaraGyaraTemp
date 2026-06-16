@@ -38,6 +38,20 @@
             'md': '4px',
             'lg': '8px',
             'xl': '12px',
+          },
+          keyframes: {
+            vaseFloat: {
+              '0%, 100%': { transform: 'translateZ(60px) translateY(0px) scale(1.02)' },
+              '50%': { transform: 'translateZ(60px) translateY(-18px) scale(1.05)' },
+            },
+            shadowFloat: {
+              '0%, 100%': { transform: 'translateX(-50%) translateZ(10px) scale(1)', opacity: '0.5' },
+              '50%': { transform: 'translateX(-50%) translateZ(10px) scale(0.6)', opacity: '0.15' },
+            }
+          },
+          animation: {
+            'vase-float': 'vaseFloat 3s ease-in-out infinite',
+            'shadow-float': 'shadowFloat 3s ease-in-out infinite',
           }
         }
       }
@@ -111,7 +125,6 @@
         </a>
       </div>
     </nav>
-
     <!-- Main Navbar -->
     <div class="bg-primary text-gray-950 md:text-white py-4 px-3 lg:px-8 sticky top-0 z-50 transition-all duration-300" id="navbarInner" role="banner">
       <div class="max-w-7xl mx-auto flex justify-between gap-1  lg:grid lg:grid-cols-3 items-center">
@@ -287,6 +300,17 @@
 
   <script src="js/critical.js?v=4" defer></script>
   <script src="js/script.js?v=4" defer></script>
+  <!-- Vanilla-Tilt Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<!-- Initialization Script -->
+<script>
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,          // Maximum tilt rotation (degrees)
+    speed: 400,       // Speed of the enter/exit transition
+    glare: false,     // Disabled to keep the styling clean
+    "full-page-listening": false 
+  });
+</script>
 </body>
 
 </html>

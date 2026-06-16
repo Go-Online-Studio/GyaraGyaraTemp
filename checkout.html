@@ -46,13 +46,16 @@
 
     .top-pattern {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 150px; 
+      right: 0px; 
       width: 200px;
       height: 200px;
-      background-image: url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M200 100C144.772 100 100 55.2285 100 0H0C0 110.457 89.543 200 200 200V100Z" fill="%23e5dfd3" fill-opacity="0.3"/></svg>');
+      background-image: url('images/BackTop.webp');
       background-size: cover;
+      background-position-x: 100px;
+      background-repeat: no-repeat;
       z-index: -1;
+      opacity: 0.3;
     }
 
     .input-field {
@@ -190,121 +193,144 @@
     </div>
   </header>
 
-  <main id="page-content" class="max-w-5xl mx-auto px-6 py-12 md:py-20">
-    <div class="mb-12">
+  <main id="page-content" class="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-16">
+  
+    <!-- Header -->
+    <div>
       <h1 class="text-4xl font-serif text-gg-text mb-4 border-b border-gray-300 pb-4 inline-block pr-12">Checkout</h1>
     </div>
+
+    <!-- Top Section: Items (Left) and Subtotal Box (Right) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      <!-- Left Column (Order Summary & Form) -->
-      <div class="lg:col-span-7 space-y-12">
-        <!-- Order Summary Section -->
+      
+      <!-- Left Column (Order Summary & Items) -->
+      <div class="lg:col-span-7">
         <section data-purpose="order-summary">
-          <h2 class="text-2xl font-serif mb-2">Order Summary</h2>
+          <h2 class="text-2xl font-bodyPoppins mb-2">Order Summary</h2>
           <p class="text-lg text-gray-600 mb-8" id="checkout-item-count">0 Items</p>
           <div class="space-y-8" id="checkout-items">
             <!-- Populated dynamically from cart localStorage -->
             <p class="text-gray-400 py-4">Loading cart...</p>
           </div>
         </section>
-        <!-- Details Form Section -->
-        <section class="pt-8 border-t border-gray-300" data-purpose="details-form">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-serif">Details:</h2>
-            <a href="user_profile_dashboard.html"
-              class="flex items-center space-x-2 border border-gray-300 rounded px-4 py-2 hover:bg-gray-100 transition-colors">
-              <span>Sign in</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-              </svg>
-            </a>
-          </div>
-          <form class="space-y-6" id="checkout-form" novalidate>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm mb-2" for="name">Your name</label>
-                <input class="input-field" id="name" type="text" required />
-              </div>
-              <div>
-                <label class="block text-sm mb-2" for="apartment">Apartment, suite, etc.</label>
-                <input class="input-field" id="apartment" type="text" />
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm mb-2" for="email">Email</label>
-                <input class="input-field" id="email" type="email" required />
-              </div>
-              <div>
-                <label class="block text-sm mb-2" for="mobile">Mobile no.</label>
-                <input class="input-field" id="mobile" type="tel" required />
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm mb-2" for="street">Street number</label>
-                <input class="input-field" id="street" type="text" required />
-              </div>
-              <div>
-                <label class="block text-sm mb-2" for="zipcode">Zipcode</label>
-                <input class="input-field" id="zipcode" type="text" required />
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm mb-2" for="city">City</label>
-                <input class="input-field" id="city" type="text" required />
-              </div>
-              <div>
-                <label class="block text-sm mb-2" for="country">Country</label>
-                <input class="input-field" id="country" type="text" required />
-              </div>
-            </div>
-          </form>
-        </section>
       </div>
-      <!-- Right Column (Totals & Checkout) -->
-      <div class="lg:col-span-5 relative mt-16 lg:mt-0">
-        <div class="sticky top-28 space-y-8">
-          <div class="border border-gray-300 rounded bg-[#fdfaf2] p-8 shadow-sm">
-            <div class="flex justify-between items-center mb-6 border-b border-gray-200 pb-4">
-              <span class="text-gray-600">Delivery:</span>
-              <span>-</span>
-            </div>
-            <div class="flex justify-between items-center mb-6 border-b border-gray-200 pb-4">
-              <span class="text-gray-600">Subtotal:</span>
-              <span id="checkout-subtotal">0.00</span>
-            </div>
-            <div class="flex justify-between items-center mb-6 border-b border-gray-200 pb-4">
-              <span class="text-gray-600">Taxes:</span>
-              <span id="checkout-taxes">0.00</span>
-            </div>
-            <div class="flex justify-between items-center pt-2">
-              <span class="text-gray-600">Total:</span>
-              <span class="font-bold text-xl" id="checkout-total">0.00</span>
-            </div>
+
+      <!-- Right Column (Totals Box) -->
+      <div class="lg:col-span-5 relative lg:mt-20">
+        <div class="border border-gray-700 rounded-lg bg-[#fdfaf2] p-4 lg:p-8 shadow-sm"> 
+          <div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+            <span class="text-gray-900">Delivery:</span>
+            <span>-</span>
           </div>
-          <!-- Discount Code -->
-          <div class="flex border border-gray-300 rounded overflow-hidden shadow-sm bg-white">
-            <input class="flex-grow px-4 py-3 border-none focus:ring-0 bg-transparent text-sm"
-              placeholder="Gift card or discount code" type="text" id="discount-code" aria-label="Discount code" />
-            <div class="w-px bg-gray-300 my-2"></div>
-            <button class="px-6 py-3 bg-gray-100 hover:bg-gray-200 transition-colors font-medium"
-              id="apply-discount">Apply</button>
+          <div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+            <span class="text-gray-900">Subtotal:</span>
+            <span id="checkout-subtotal">0.00</span>
           </div>
-          <!-- Proceed Button -->
-          <div class="text-center mt-12 pt-8 border-t border-gray-300">
-            <button
-              class="border border-gg-text px-8 py-3 uppercase tracking-widest text-sm hover:bg-gg-text hover:text-white transition-colors"
-              id="proceed-payment">
-              Proceed to payment
-            </button>
+          <div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+            <span class="text-gray-900">Taxes:</span>
+            <span id="checkout-taxes">0.00</span>
           </div>
-        </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-gray-900">Total:</span>
+            <span class="font-bold text-xl" id="checkout-total">0.00</span>
+          </div>
+        </div>        
       </div>
     </div>
 
-  </main>
+    <!-- Middle Section: Discount Code -->
+    <div class="flex justify-center">
+      <div class="flex items-center border-2 border-gray-400 rounded-xl overflow-hidden bg-[#faf8f5] shadow-lg max-w-xl w-full">
+        <input 
+          class="flex-grow pl-6 pr-4 py-3 border-none focus:outline-none focus:ring-0 bg-transparent placeholder-[#b0a89f] text-[15px]"
+          placeholder="Gift card or discount code" 
+          type="text" 
+          id="discount-code" 
+          aria-label="Discount code" 
+        />
+        <div class="w-px h-6 bg-gray-400"></div>
+        <button 
+          class="px-6 py-3 bg-[#f0f2f5] hover:bg-[#e4e6e9] transition-colors text-black text-[16px] font-normal tracking-wide"
+          id="apply-discount"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+
+    <!-- Lower Section: Details Form -->
+    <section data-purpose="details-form">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-serif">Details:</h2>
+        <a href="user_profile_dashboard.html"
+          class="flex items-center bg-[var(--gg-surface)] shadow-lg space-x-2 border border-gray-700 rounded-lg px-4 py-2 hover:bg-[var(--gg-surface-dim)] transition-colors">
+          <span>Sign in</span>
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g fill="#000"><path d="M14.945 1.25c-1.367 0-2.47 0-3.337.117-.9.12-1.658.38-2.26.981-.524.525-.79 1.17-.929 1.928-.135.737-.161 1.638-.167 2.72a.75.75 0 0 0 1.5.008c.006-1.093.034-1.868.142-2.457.105-.566.272-.895.515-1.138.277-.277.666-.457 1.4-.556.755-.101 1.756-.103 3.191-.103h1c1.436 0 2.437.002 3.192.103.734.099 1.122.28 1.4.556s.456.665.555 1.4c.102.754.103 1.756.103 3.191v8c0 1.435-.001 2.437-.103 3.192-.099.734-.279 1.122-.556 1.399s-.665.457-1.399.556c-.755.101-1.756.103-3.192.103h-1c-1.435 0-2.436-.002-3.192-.103-.733-.099-1.122-.28-1.399-.556-.243-.243-.41-.572-.515-1.138-.108-.589-.136-1.364-.142-2.457a.75.75 0 1 0-1.5.008c.006 1.082.032 1.983.167 2.72.14.758.405 1.403.93 1.928.601.602 1.36.86 2.26.982.866.116 1.969.116 3.336.116h1.11c1.368 0 2.47 0 3.337-.117.9-.12 1.658-.38 2.26-.981.602-.602.86-1.36.982-2.26.116-.867.116-1.97.116-3.337v-8.11c0-1.367 0-2.47-.116-3.337-.121-.9-.38-1.658-.982-2.26-.602-.602-1.36-.86-2.26-.981-.867-.117-1.97-.117-3.337-.117z" fill="#000000"></path><path d="M2.001 11.249a.75.75 0 0 0 0 1.5h11.973l-1.961 1.68a.75.75 0 1 0 .976 1.14l3.5-3a.75.75 0 0 0 0-1.14l-3.5-3a.75.75 0 0 0-.976 1.14l1.96 1.68z" fill="#000000"></path></g></g></svg>
+        </a>
+      </div>
+      <div class="w-full h-px bg-outline-variant border-t border-gray-700"></div>
+      
+      <form class="space-y-6 w-full mt-8" id="checkout-form" novalidate>
+        <!-- Row 1: Name and Apartment -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:gap-x-8 gap-y-6">
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="name">Your name</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="name" type="text" required />
+          </div>
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="apartment">Apartment, suite, etc.</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="apartment" type="text" />
+          </div>
+        </div>
+
+        <!-- Row 2: Email and Mobile -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:gap-x-8 gap-y-6">
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="email">Email</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="email" type="email" required />
+          </div>
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="mobile">Mobile no.</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="mobile" type="tel" required />
+          </div>
+        </div>
+
+        <!-- Row 3: Street and Zipcode -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:gap-x-8 gap-y-6">
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="street">Street number</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="street" type="text" required />
+          </div>
+          <div>
+            <label class="block text-base font-normal mb-2 tracking-wide" for="zipcode">Zipcode</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="zipcode" type="text" required />
+          </div>
+        </div>
+
+        <!-- Row 4: City and Country -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:gap-x-8 gap-y-6">
+          <div>
+            <label class="block text-[#1A1A1A] text-base font-normal mb-2 tracking-wide" for="city">City</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="city" type="text" required />
+          </div>
+          <div>
+            <label class="block text-[#1A1A1A] text-base font-normal mb-2 tracking-wide" for="country">Country</label>
+            <input class="w-full border border-gray-700 rounded-lg px-4 py-3 text-base outline-none transition-colors duration-200 focus:ring-1 focus:ring-[#1a2a40d6]" id="country" type="text" required />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Bottom Section: Proceed Button -->
+    <div class="text-center pt-8">
+      <button
+        class="border shadow-lg border-gg-text px-4 lg:px-8 py-3 uppercase tracking-widest text-sm bg-[var(--gg-surface)] hover:bg-[var(--gg-primary)] hover:text-white transition-colors rounded-lg"
+        id="proceed-payment">
+        Proceed to payment
+      </button>
+    </div>
+
+</main>
 
   <footer id="mainFooter" class="overflow-hidden relative">
 
